@@ -8,6 +8,14 @@ Coming Soon
 
 Coming Soon
 
+## List of our Repos
+
+ - Cloud Engine
+ - ManageIQ
+ - Marketplace
+ - Cookbooks
+ - ??
+
 ## License
 
 See [LICENSE.txt](LICENSE.txt)
