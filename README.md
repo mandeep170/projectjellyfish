@@ -2,8 +2,8 @@
 
 ## Get Started
 
-Requirements
-___________
+#Requirements:
+___
 
 
 ## Learn more
