@@ -64,7 +64,23 @@ or
  - Navigate to Store>Products>Add a Product
  - Choose "Create Application" or choose the type of item you are adding to the catalog
  - Enter the specifics for the Application Product
-   - 
+    - Enter a unique Product SKU
+    - Enter the title of the application catalog
+    - Enter the price
+    - Click on "Active" for status
+    - Select the size of your product
+    - Choose the server type of the project
+    - Choose a server size
+    - Choose a CPU
+    - Choose the size of RAM memory
+    - Choose the OS
+    - Choose the Networking option
+    - Choose the Elasticity option
+    - Choose the Storage option
+ - Click "Save Product"
+ - Confirm the product was added
+    - Navigate to Store > Products
+    - Locate and confirm the product was added to the store
 
 ###Configuring the Cloud Gateway
 1. Adding templates to ManageIQ
