@@ -4,22 +4,46 @@
 
 
 
-###Installing the Cloud Portal
+###Installing the Cookbooks
 
-1) Log in to your Cloud Portal VM as the root user
+1. Log in to the appropriate VM as the root user
 >ssh root@<ip-address> -i server-cert-key.pem
-2) Update Vm and install telnet, wget, and unzip and dependencies
+
+2. Update Vm and install telnet, wget, and unzip and dependencies
 >[root@server ~]# yum update –y
+>
 >[root@server ~]# yum install -y vim telnet unzip wget git
-3) Go to http://gettingstartedwithchef.com/first-steps-with-chef.html and follow the instructions to install Chef on your VM.
+
+3. Go to http://gettingstartedwithchef.com/first-steps-with-chef.html and follow the instructions to install Chef on your VM.
 >Thank you for installing Chef!
-4) Using the instructions on http://gettingstartedwithchef.com/first-steps-with-chef.html, create a cookbook.
-5) Install the Marketplace cookbook
+
+4. Using the instructions on http://gettingstartedwithchef.com/first-steps-with-chef.html, create a cookbook.
+
+5. Install the Marketplace, ServiceMix, or ManageIQ cookbook
 >[root@server ~/chef-repo]# knife cookbook site install bah-marketplace
-6) Run Chef-solo (this could take up to 10 or 15 minutes)
+>
+or
+>
+>[root@server ~/chef-repo]# knife cookbook site install servicemix
+>
+or
+>
+>[root@server ~/chef-repo]# knife cookbook site install manageiq
+
+6. Run Chef-solo (this could take up to 10 or 15 minutes)
 >[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/bahmarketplace.json
 >
+>or
+>
+>[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/servicemix.json
+>
+>or
+>
+>[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/manageiq.json
+>
 >Chef Client finished
+
+
 
 ## Learn more
 
