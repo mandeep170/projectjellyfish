@@ -102,10 +102,10 @@ Create Application and Add
  - On the Add a New Action page, click on the dropdown menu to add a variable
    - Locate "Send Mail" from the System block and click on it
  - On the Add a New Action page, add the following attributes:
-   - Recipient's email
-   - Subject of the email (add the following indentifier at the end of the  email to add the project add code [node:field-app-code]
-   - Add the body of the email
-   - Click Save
+    - Recipient's email
+    - Subject of the email (add the following indentifier at the end of the  email to add the project add code [node:field-app-code]
+    - Add the body of the email
+    - Click Save
 
 ###Configuring the Cloud Gateway
 1. Adding templates to ManageIQ
