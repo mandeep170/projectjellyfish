@@ -58,7 +58,9 @@ or
 1. Configure Communications
  - Go to http://CLOUD_GATEWAY_IP/admin/commerce/bah-order-com
  - Enter http://CLOUD_ENGINE_IP:8183/orders/create/ in "Transmit URL"
+ - Enter the ServiceMix Username and Password
  - Also on this page, note the Receive-Api Key required to configure the Cloud Engine
+
 2. Add Catalog Items
 Create Application and Add
  - Navigate to Store>Products>Add a Product
@@ -91,6 +93,19 @@ Create Application and Add
    - Click "Add Product"
  - Click "Save"
  - Visit the Marketplace Catalog and confirm the product you added is located in the catalog
+
+3. Create a Form Email Configuration
+ - Navigate to Configuration > Workflow > Rules
+ - On the Rules page, under Active Rules, locate the rules titled "Email when project_req set to Approved"
+   - Click on the rule to edit
+ - In the rule editing screen, locate the Actions elements table and click the "+Add Action" button
+ - On the Add a New Action page, click on the dropdown menu to add a variable
+   - Locate "Send Mail" from the System block and click on it
+ - On the Add a New Action page, add the following attributes:
+   - Recipient's email
+   - Subject of the email (add the following indentifier at the end of the  email to add the project add code [node:field-app-code]
+   - Add the body of the email
+   - Click Save
 
 ###Configuring the Cloud Gateway
 1. Adding templates to ManageIQ
