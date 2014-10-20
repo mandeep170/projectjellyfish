@@ -81,7 +81,7 @@ Create Application and Add
  - Confirm the product was added
     - Navigate to Store > Products
     - Locate and confirm the product was added to the store
-Add the product to the Display reference Node on the marketplace
+
  - Navigate to Content > Add Content > Product
  - Enter the Product Name
  - Enter a Description for the product
@@ -90,7 +90,7 @@ Add the product to the Display reference Node on the marketplace
    - In the product field, enter the SKU for the item you created
    - Click "Add Product"
  - Click "Save"
-Visit the Marketplace Catalog and confirm the product you added is located in the catalog.
+ - Visit the Marketplace Catalog and confirm the product you added is located in the catalog
 
 ###Configuring the Cloud Gateway
 1. Adding templates to ManageIQ
