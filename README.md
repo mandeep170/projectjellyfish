@@ -54,6 +54,9 @@ or
 3. Restart the Cloud Engine
 >service servicemix-service restart
 
+###Configuring thr Cloud Gateway
+ - Go to http://CLOUD_GATEWAY_IP/admin/commerce/bah-order-com
+ - Enter http://CLOUD_ENGINE_IP:8183/orders/create/ in "Transmit URL"
 
 ## Learn more
 
