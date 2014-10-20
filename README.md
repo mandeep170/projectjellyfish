@@ -60,6 +60,7 @@ or
  - Enter http://CLOUD_ENGINE_IP:8183/orders/create/ in "Transmit URL"
  - Also on this page, note the Receive-Api Key required to configure the Cloud Engine
 2. Add Catalog Items
+Create Application and Add
  - Navigate to Store>Products>Add a Product
  - Choose "Create Application" or choose the type of item you are adding to the catalog
  - Enter the specifics for the Application Product
@@ -80,7 +81,7 @@ or
  - Confirm the product was added
     - Navigate to Store > Products
     - Locate and confirm the product was added to the store
-3. Add the product to the Display reference Node on the marketplace
+Add the product to the Display reference Node on the marketplace
  - Navigate to Content > Add Content > Product
  - Enter the Product Name
  - Enter a Description for the product
@@ -89,7 +90,7 @@ or
    - In the product field, enter the SKU for the item you created
    - Click "Add Product"
  - Click "Save"
-4. Visit the Marketplace Catalog and confirm the product you added is located in the catalog.
+Visit the Marketplace Catalog and confirm the product you added is located in the catalog.
 
 ###Configuring the Cloud Gateway
 1. Adding templates to ManageIQ
