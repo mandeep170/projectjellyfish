@@ -54,9 +54,21 @@ or
 3. Restart the Cloud Engine
 >service servicemix-service restart
 
-###Configuring thr Cloud Gateway
+###Configuring the Cloud Portal
+1. Configure Communications
  - Go to http://CLOUD_GATEWAY_IP/admin/commerce/bah-order-com
  - Enter http://CLOUD_ENGINE_IP:8183/orders/create/ in "Transmit URL"
+ - Also on this page, note the Receive-Api Key required to configure the Cloud Engine
+
+2. Add Catalog Items
+ - Navigate to Store>Products>Add a Product
+ - Choose "Create Application" or choose the type of item you are adding to the catalog
+ - Enter the specifics for the Application Product
+   - 
+
+###Configuring the Cloud Gateway
+1. Adding templates to ManageIQ
+2. 
 
 ## Learn more
 
