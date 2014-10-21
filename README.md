@@ -45,7 +45,7 @@ or
 
 ###Configuring the Cloud Engine
 1. Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
-/opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
+>/opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
 
 2. Make the following changes to the file, then write+exit:
  - Insert the Cloud Portal, Engine, or Gateway IP addresses where they are referenced
@@ -61,7 +61,7 @@ or
  - Enter the ServiceMix Username and Password
  - Also on this page, note the Receive-Api Key required to configure the Cloud Engine
 
-2. Add Catalog Items
+2. Add/Maintain a Catalog of Items
 Create Application and Add
  - Navigate to Store>Products>Add a Product
  - Choose "Create Application" or choose the type of item you are adding to the catalog
@@ -106,6 +106,26 @@ Create Application and Add
     - Subject of the email (add the following indentifier at the end of the  email to add the project add code [node:field-app-code]
     - Add the body of the email
     - Click Save
+
+4. Update CRON Job Run Frequency
+ - On the administrative toolbar on the top of the page, navigate to Configuration > System > Cron Settings > Settings
+ - On the Settings page, under "Single Job Settings," locate the job called "bah_order_com_cron," and adjust to your desired schedule
+ - Click Save.  If the changes are successful, a confirmation message will appear at the top of the screen. If you do not see this message, refresh the page, check "bah_order_com_cron," and try again.
+
+5. LDAP Configuration
+ - Navigate to Configuration > People > LDAP Configuration
+ - Settings Tab
+    - The Settings page is the default tab when accessing the LDAP Configuration. All items on the Settings page should remain default.
+ - Servers tab
+    - You can add multiple LDAP Servers to use with the LDAP Authentication module. Server settings can be edited via the "List" tab once edited.
+ - User Tab
+    - This tab specifically addresses how user accounts are provisioned, synched, and updated between Drupal and Active Directory. In this envoironment, Drupal only pulls information from Active Directory so the BASIC PROVISIONING TO LDAP SETTINGS are left at their default value
+ - Authentication Tab
+    - Authenticate LDAP users
+ - Authorization
+    - This tab allows for Active Directory Security Groups to be mapped to roles and organic groups defines within Drupal and providing role Based Access to the marketplace
+ - Project Configuration
+    - When a new project has been requested, the marketplace must be updated to include the project APP code and the funding amount available for the project. This creation will allow associated users to access funds and the rights to provision the environment. Navigate to Content > Add Content > Project to create a new project and populate the appropriate title, organic group credits, and application code information.
 
 ###Configuring the Cloud Gateway
 1. Adding templates to ManageIQ
