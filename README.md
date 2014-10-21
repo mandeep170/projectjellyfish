@@ -168,7 +168,43 @@ Create Application and Add
  - In the Basic Info section, fill in the item name and description. If you would like to assign the item to a catalog, check with "Display in Catalog" box, and fill in the required information.
  - Go to the Request Info section. Navigate through each sub-tab, and fill in the information required by the provider (at a minimum, field names marked with an asterick are required)
  - Click Add
-3. Configuring Chef
+3. Configuring Script to Update Cloud Engine
+ - Navigate to Automate>Explorer
+ - Click on the Datastore folder
+    - Select "Add a New Domain" from the Configuration drop down menu
+    - Enter "BAH" for the Name
+    - Enter "Booz Allen Hamilton Customization" for the Description
+    - Check enabled
+    - Click Save
+ - Navigate to ManageIQ>Service>Provisioning>StatsMachines>Methods
+ - Select the Instances tab
+    - Select "Add a New Instance" from the Configuration drop down menu
+    - Enter "update_servicemix_and_chef" for the Name and the Display Name
+    - Go to the Fields section
+      - Find "execute" under the Name column
+      - Enter update_servicemix_and_chef for the Value
+      - Click Add
+ - Navigate to ManageIQ>Service>Provisioning>StateMachines>Methods
+ - Select the Methods tab
+    - Click on Configuration -> Add a New Method
+    - Enter update_servicemix_and_chef for the Name
+    - Enter update_servicemix_and_chef for the Display Name
+    - For the Location, select inline
+    - Under Data, paste the code from [update_servicemix_and_chef code link]
+    - Click Add
+ - Navigate to ManageIQ>Service>Provisioning>StateMachines>ServiceProvision_Template>CatalogItemInitialization
+    - Click on Configuration -> Copy this Instance
+    - For the To Domain value, select BAH from the drop down list
+    - Check the Copy to same path
+    - Click Copy
+ - Navigate to ManageIQ>Service>Provisioning>StateMachines>ServiceProvision_Template>CatalogItemInitialization
+    - Select "Edit this Instance" in the Configuration drop down menu
+    - Go to the Fields section
+    - Under the Name column, find post1
+    - For the Value, enter /Service/Provisioning/StateMachines/Methods/update_servicemix_and_chef
+    - Click Save
+ - Create a new catalof item or select an existing one
+ - For the Provisioning Entry Point, set the value to /BAH/Service/Provisioning/StateMachines/ServiceProvision_Template/CatalogItemInitialization
 
 ## Learn more
 
