@@ -3,6 +3,7 @@
 ##Welcome to Project Jellyfish
 Jellyfish is Booz Allen Hamilton's hybrid, automated, and customizable cloud management and brokerage solution. Jellyfish helps administrators track resource utilization and costs, simplifies the process of requesting cloud resources, and reduces the time required to acquire services. As a result, organizations can effectively manage their increasing number of cloud resources to ensure compliance with security, cost, and time requirements.
 ###Architecture
+Jellyfish is made up of three components, the Cloud Portal, the Cloud Engine, and the Cloud Gateway. Each component serves a specific function, and when integrated together, they provide a flexible framework with the ability ot interface to multiple cloud providers behind a single portal.<br>
 **Cloud Portal**<br>
 The Cloud Portal is a single pane of glass that users can use to browse and order a variety of IaaS, PaaS, and SaaS resources from the customizable storefront catalog. It also serves as a single point of entry for administrators to login and manage marketplace resources and user accounts. The Cloud Portal is built using Drupal 7.24.<br>
 
@@ -51,17 +52,6 @@ The Cloud Gateway is ManageIQ, and it enables integration between the cloud brok
  - Cloud Gateway
 >[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/manageiq.json
 
-
-###Configuring the Cloud Engine
-1. Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
->/opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
-
-2. Make the following changes to the file, then write+exit:
- - Insert the Cloud Portal, Engine, or Gateway IP addresses where they are referenced
- - Set "marketplace.restKey" to the Receive-API Key from the Broker Order Communications Page in the Cloud Portal
-
-3. Restart the Cloud Engine
->service servicemix-service restart
 
 ###Configuring the Cloud Portal
 1. Configure Communications
@@ -142,6 +132,16 @@ Create Application and Add
  - Click "+ Add Content" anc click on FAQ
  - Create an FAQ by filling in the question and response fields and then click Save
 
+###Configuring the Cloud Engine
+1. Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
+>/opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
+
+2. Make the following changes to the file, then write+exit:
+ - Insert the Cloud Portal, Engine, or Gateway IP addresses where they are referenced
+ - Set "marketplace.restKey" to the Receive-API Key from the Broker Order Communications Page in the Cloud Portal
+
+3. Restart the Cloud Engine
+>service servicemix-service restart
 
 ###Configuring the Cloud Gateway
 1. Adding templates to ManageIQ
