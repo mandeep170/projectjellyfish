@@ -127,6 +127,13 @@ Create Application and Add
  - Project Configuration
     - When a new project has been requested, the marketplace must be updated to include the project APP code and the funding amount available for the project. This creation will allow associated users to access funds and the rights to provision the environment. Navigate to Content > Add Content > Project to create a new project and populate the appropriate title, organic group credits, and application code information.
 
+6. Updating FAQs
+ - In the toolbar, navigate to Content
+ - Select "FAQ" from the Type drop down menu and click Filter
+ - Click "+ Add Content" anc click on FAQ
+ - Create an FAQ by filling in the question and response fields and then click Save
+
+
 ###Configuring the Cloud Gateway
 1. Adding templates to ManageIQ
 2. 
