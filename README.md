@@ -144,8 +144,31 @@ Create Application and Add
 >service servicemix-service restart
 
 ###Configuring the Cloud Gateway
-1. Adding templates to ManageIQ
-2. 
+1. Adding Providers
+ - Cloud Providers
+    - Navigate to Clouds>Providers
+    - Click on the Configuration drop down menu, and select "+ add a New Cloud Provider"
+    - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in corresponding fields
+    - In the Credentials section, enter your security information for the provider you selected
+    - Click Validate
+    - Click Add
+
+ - Infrstructure Providers
+    - Navigate to Infrastructure>Providers
+    - Click on the Configuration drop down menu, and select "+ add a New Infrastructure Provider"
+    - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in corresponding fields
+    - In the Credentials section, enter your security information for the provider you selected
+    - Click Validate
+    - Click Add
+2. Adding Catalog Items
+ - Navigate to Services>Catalogs
+ - Click on the Catalog Items accordion tab
+ - Click on the Configuration drop down menu, and select "+ add a New Catalog Item"
+ - Select a Catalog Item Type from the drop down menu
+ - In the Basic Info section, fill in the item name and description. If you would like to assign the item to a catalog, check with "Display in Catalog" box, and fill in the required information.
+ - Go to the Request Info section. Navigate through each sub-tab, and fill in the information required by the provider (at a minimum, field names marked with an asterick are required)
+ - Click Add
+3. Configuring Chef
 
 ## Learn more
 
