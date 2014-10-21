@@ -53,8 +53,8 @@
 
 ###Configuring the Cloud Portal
 1. Configure Communications
- - Go to http://CLOUD_GATEWAY_IP/admin/commerce/bah-order-com
- - Enter http://CLOUD_ENGINE_IP:8183/orders/create/ in "Transmit URL"
+ - Within the Cloud Portal, navigate to Store>Broker Order Communications
+ - Enter *http://CLOUD_ENGINE_IP:8183/orders/create/* in "Transmit URL"
  - Enter the ServiceMix Username and Password
  - Also on this page, note the Receive-Api Key required to configure the Cloud Engine
 
@@ -78,10 +78,10 @@ Create Application and Add
     - Choose the Storage option
  - Click "Save Product"
  - Confirm the product was added
-    - Navigate to Store > Products
+    - Navigate to Store>Products
     - Locate and confirm the product was added to the store
 
- - Navigate to Content > Add Content > Product
+ - Navigate to Content>Add Content>Product
  - Enter the Product Name
  - Enter a Description for the product
  - Click "Choose File" and upload an image for the product
@@ -105,12 +105,12 @@ Create Application and Add
     - Click Save
 
 4. Update CRON Job Run Frequency
- - On the administrative toolbar on the top of the page, navigate to Configuration > System > Cron Settings > Settings
+ - On the administrative toolbar on the top of the page, navigate to Configuration>System>Cron Settings>Settings
  - On the Settings page, under "Single Job Settings," locate the job called "bah_order_com_cron," and adjust to your desired schedule
  - Click Save.  If the changes are successful, a confirmation message will appear at the top of the screen. If you do not see this message, refresh the page, check "bah_order_com_cron," and try again.
 
 5. LDAP Configuration
- - Navigate to Configuration > People > LDAP Configuration
+ - Navigate to Configuration>People>LDAP Configuration
  - Settings Tab
     - The Settings page is the default tab when accessing the LDAP Configuration. All items on the Settings page should remain default.
  - Servers tab
