@@ -19,29 +19,26 @@
 
 4. Using the instructions on http://gettingstartedwithchef.com/first-steps-with-chef.html, create a cookbook.
 
-5. Install the Marketplace, ServiceMix, or ManageIQ cookbook
+5. Run the appropriate Cookbook
+ - Cloud Portal
 >[root@server ~/chef-repo]# knife cookbook site install bah-marketplace
->
-or
->
+
+ - Cloud Engine
 >[root@server ~/chef-repo]# knife cookbook site install servicemix
->
-or
->
+
+ - Cloud Gateway
 >[root@server ~/chef-repo]# knife cookbook site install manageiq
 
-6. Run Chef-solo (this could take up to 10 or 15 minutes)
+6. Run the appropriate Chef-solo command (this could take up to 10 or 15 minutes)
+ - Cloud Portal
 >[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/bahmarketplace.json
->
->or
->
+
+ - Cloud Engine
 >[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/servicemix.json
->
->or
->
+
+ - Cloud Gateway
 >[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/manageiq.json
->
->Chef Client finished
+
 
 ###Configuring the Cloud Engine
 1. Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
