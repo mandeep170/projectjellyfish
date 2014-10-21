@@ -1,8 +1,20 @@
 #Official Release October 20, 2014
 
+##Welcome to Project Jellyfish
+Jellyfish is Booz Allen Hamilton's hybrid, automated, and customizable cloud management and brokerage solution. Jellyfish helps administrators track resource utilization and costs, simplifies the process of requesting cloud resources, and reduces the time required to acquire services. As a result, organizations can effectively manage their increasing number of cloud resources to ensure compliance with security, cost, and time requirements.
+###Architecture
+**Cloud Portal**<br>
+The Cloud Portal is a single pane of glass that users can use to browse and order a variety of IaaS, PaaS, and SaaS resources from the customizable storefront catalog. It also serves as a single point of entry for administrators to login and manage marketplace resources and user accounts. The Cloud Portal is built using Drupal 7.24.<br>
+
+**Cloud Engine**<br>
+The Cloud Engine provides the core automation capabilities of the cloud broker. The Jellyfish Cloud Engine uses  Apache ServiceMix 5.1.2 as the messaging engine and Chef as the configuration management engine.<br>
+
+**Cloud Gateway**<br>
+The Cloud Gateway is ManageIQ, and it enables integration between the cloud broker and cloud providers. The Cloud Gateway provides multi-cloud provisioning and management capabilities as serves as a central point for all the user's cloud resources.
+
+
+
 ## Get Started
-
-
 
 ###Installing the Cookbooks
 
