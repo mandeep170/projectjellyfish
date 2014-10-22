@@ -234,7 +234,7 @@ Jellyfish is built using three virtual machines for the three promary components
 
 **Cloud Engine Requirements**
 
-| Component          |Cloud Portal                                      |
+| Component          |Cloud Engine                                      |
 | --------           |:------------                                    |
 | Operating System   | RHEL 6.5 ot CentOS 6.5                           |
 | Memory             | 8 BG                                             |    
@@ -246,7 +246,7 @@ Jellyfish is built using three virtual machines for the three promary components
 
 **Cloud Gateway Requirements**
 
-| Component          |Cloud Portal                                      |
+| Component          |Cloud Gateway                                      |
 | --------           |:------------                                    |
 | Operating System   | RHEL 6.5 ot CentOS 6.5                           |
 | Memory             | 8 BG                                             |    
