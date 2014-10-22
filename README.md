@@ -23,6 +23,47 @@ The Cloud Gateway is ManageIQ, and it enables integration between the cloud brok
     - [ServiceMix Cookbook] (https://github.com/booz-allen-hamilton/chef-servicemix)
     - [ManageIQ Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
 
+## Requirements
+Jellyfish is built using three virtual machines for the three promary components. At a minimum, the cloud broker requires the following hardware, operating systems, and communications settings to support the suite of open source products.
+
+**Cloud Portal Requirements**
+
+| Component          |Cloud Portal                                      |
+| --------           |:------------                                    |
+| Operating System   | RHEL 6.5 ot CentOS 6.5                           |
+| Memory             | 8 BG                                             |    
+| CPU                | 2                                                |
+| Disk               | 100 GB                                           |
+| TCP Ports          | 22,80,443,8181                                   |
+| UDP Ports          |                                                  |
+| Network Access     | Public facing and access to broker services (8183)  |
+
+**Cloud Engine Requirements**
+
+| Component          |Cloud Engine                                      |
+| --------           |:------------                                    |
+| Operating System   | RHEL 6.5 ot CentOS 6.5                           |
+| Memory             | 8 BG                                             |    
+| CPU                | 2                                                |
+| Disk               | 50 GB                                            |
+| TCP Ports          | 22,8180,8181,8182,8183,8080,61616                |
+| UDP Ports          | 61616                                            |
+| Network Access     | Access to broker services (8180,8181,8182,8080,61616)      |
+
+**Cloud Gateway Requirements**
+
+| Component          |Cloud Gateway                                      |
+| --------           |:------------                                    |
+| Operating System   | RHEL 6.5 ot CentOS 6.5                           |
+| Memory             | 8 BG                                             |    
+| CPU                | 2                                                |
+| Disk               | 80 GB                                            |
+| TCP Ports          | 22,443,80                                        |
+| UDP Ports          |                                                  |
+| Network Access     | Access to cloud providers and broker services (443,8183)   |
+
+
+
 ## Get Started
 
 ###Installing the Cookbooks
@@ -31,34 +72,13 @@ The Cloud Gateway is ManageIQ, and it enables integration between the cloud brok
 >ssh root@<ip-address> -i server-cert-key.pem
 
 2. Update Vm and install telnet, wget, and unzip and dependencies
->[root@server ~]# yum update –y
->
+>[root@server ~]# yum update –y<br>
 >[root@server ~]# yum install -y vim telnet unzip wget git
 
-3. Go to http://gettingstartedwithchef.com/first-steps-with-chef.html and follow the instructions to install Chef on your VM.
->Thank you for installing Chef!
-
-4. Using the instructions on http://gettingstartedwithchef.com/first-steps-with-chef.html, create a cookbook.
-
-5. Run the appropriate Cookbook
- - Cloud Portal
->[root@server ~/chef-repo]# knife cookbook site install bah-marketplace
-
- - Cloud Engine
->[root@server ~/chef-repo]# knife cookbook site install servicemix
-
- - Cloud Gateway
->[root@server ~/chef-repo]# knife cookbook site install manageiq
-
-6. Run the appropriate Chef-solo command (this could take up to 10 or 15 minutes)
- - Cloud Portal
->[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/bahmarketplace.json
-
- - Cloud Engine
->[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/servicemix.json
-
- - Cloud Gateway
->[root@server ~/chef-repo]# chef-solo –c solo.rb –j roles/manageiq.json
+3. Follow the specific instructions within the cookbook repo:
+ - [Marketplace Cookbook] (https://github.com/booz-allen-hamilton/chef-marketplace)
+ - [ServiceMix Cookbook] (https://github.com/booz-allen-hamilton/chef-servicemix)
+ - [ManageIQ Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
 
 ###Configuring the Cloud Portal
 1. Configure Communications
@@ -216,47 +236,6 @@ service servicemix-service restart
     - Click Save
  - Create a new catalof item or select an existing one
  - For the Provisioning Entry Point, set the value to /BAH/Service/Provisioning/StateMachines/ServiceProvision_Template/CatalogItemInitialization
-
-
-## Requirements
-Jellyfish is built using three virtual machines for the three promary components. At a minimum, the cloud broker requires the following hardware, operating systems, and communications settings to support the suite of open source products.
-
-**Cloud Portal Requirements**
-
-| Component          |Cloud Portal                                      |
-| --------           |:------------                                    |
-| Operating System   | RHEL 6.5 ot CentOS 6.5                           |
-| Memory             | 8 BG                                             |    
-| CPU                | 2                                                |
-| Disk               | 100 GB                                           |
-| TCP Ports          | 22,80,443,8181                                   |
-| UDP Ports          |                                                  |
-| Network Access     | Public facing and access to broker services (8183)  |
-
-**Cloud Engine Requirements**
-
-| Component          |Cloud Engine                                      |
-| --------           |:------------                                    |
-| Operating System   | RHEL 6.5 ot CentOS 6.5                           |
-| Memory             | 8 BG                                             |    
-| CPU                | 2                                                |
-| Disk               | 50 GB                                            |
-| TCP Ports          | 22,8180,8181,8182,8183,8080,61616                |
-| UDP Ports          | 61616                                            |
-| Network Access     | Access to broker services (8180,8181,8182,8080,61616)      |
-
-**Cloud Gateway Requirements**
-
-| Component          |Cloud Gateway                                      |
-| --------           |:------------                                    |
-| Operating System   | RHEL 6.5 ot CentOS 6.5                           |
-| Memory             | 8 BG                                             |    
-| CPU                | 2                                                |
-| Disk               | 80 GB                                            |
-| TCP Ports          | 22,443,80                                        |
-| UDP Ports          |                                                  |
-| Network Access     | Access to cloud providers and broker services (443,8183)   |
-
 
 
 ## License
