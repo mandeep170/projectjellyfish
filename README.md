@@ -218,17 +218,17 @@ Create Application and Add
 
 ## Requirements
 Jellyfish is built using three virtual machines for the three promary components. At a minimum, the cloud broker requires the following hardware, operating systems, and communications settings to support the suite of open source products.
-<br>
-**Cloud Portal Requirements**<br>
-|Component         |Cloud Portal                                    |
-|------------------|------------------------------------------------|
-|Operating System  |RHEL 6.5 ot CentOS 6.5                          |
-|Memory            |8 BG                                            |    
-|CPU               |2                                               |
-|Disk              |100 GB                                          |
-|TCP Ports         |22, 80, 443, 8181                               |
-|UDP Ports         |                                                |
-|Network Access    |Public facing, access to broker services (8183) |
+
+**Cloud Portal Requirements**
+Component          |Cloud Portal                                     |
+------------------ |:----------------------------------------------: |
+Operating System   |RHEL 6.5 ot CentOS 6.5                           |
+Memory             |8 BG                                             |    
+CPU                |2                                                |
+Disk               |100 GB                                           |
+TCP Ports          |22, 80, 443, 8181                                |
+UDP Ports          |                                                 |
+eeNetwork Access   |Public facing, access to broker services (8183)  |
 
 ## License
 
