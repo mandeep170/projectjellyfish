@@ -3,7 +3,7 @@
 ##Welcome to Project Jellyfish
 Jellyfish is Booz Allen Hamilton's hybrid, automated, and customizable cloud management and brokerage solution. Jellyfish helps administrators track resource utilization and costs, simplifies the process of requesting cloud resources, and reduces the time required to acquire services. As a result, organizations can effectively manage their increasing number of cloud resources to ensure compliance with security, cost, and time requirements.
 ###Architecture
-Jellyfish is made up of three components, the Cloud Portal, the Cloud Engine, and the Cloud Gateway. Each component serves a specific function, and when integrated together, they provide a flexible framework with the ability ot interface to multiple cloud providers behind a single portal.<br>
+Jellyfish is made up of three components, the Cloud Portal, the Cloud Engine, and the Cloud Gateway. Each component serves a specific function, and when integrated together, they provide a flexible framework with the ability to interface to multiple cloud providers behind a single portal.<br>
 **Cloud Portal**<br>
 The Cloud Portal is a single pane of glass that users can use to browse and order a variety of IaaS, PaaS, and SaaS resources from the customizable storefront catalog. It also serves as a single point of entry for administrators to login and manage marketplace resources and user accounts. The Cloud Portal is built using Drupal 7.24.<br>
 
@@ -24,7 +24,7 @@ The Cloud Gateway is ManageIQ, and it enables integration between the cloud brok
     - [ManageIQ Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
 
 ## Requirements
-Jellyfish is built using three virtual machines for the three promary components. At a minimum, the cloud broker requires the following hardware, operating systems, and communications settings to support the suite of open source products.
+Jellyfish is built using three virtual machines for the three primary components. At a minimum, the cloud broker requires the following hardware, operating systems, and communications settings to support the suite of open source products.
 
 **Cloud Portal Requirements**
 
@@ -42,7 +42,7 @@ Jellyfish is built using three virtual machines for the three promary components
 
 | Component          |Cloud Engine                                      |
 | --------           |:------------                                    |
-| Operating System   | RHEL 6.5 ot CentOS 6.5                           |
+| Operating System   | RHEL 6.5 or CentOS 6.5                           |
 | Memory             | 8 BG                                             |    
 | CPU                | 2                                                |
 | Disk               | 50 GB                                            |
@@ -54,7 +54,7 @@ Jellyfish is built using three virtual machines for the three promary components
 
 | Component          |Cloud Gateway                                      |
 | --------           |:------------                                    |
-| Operating System   | RHEL 6.5 ot CentOS 6.5                           |
+| Operating System   | RHEL 6.5 or CentOS 6.5                           |
 | Memory             | 8 BG                                             |    
 | CPU                | 2                                                |
 | Disk               | 80 GB                                            |
@@ -71,7 +71,7 @@ Jellyfish is built using three virtual machines for the three promary components
 1. Log in to the appropriate VM as the root user
 >ssh root@<ip-address> -i server-cert-key.pem
 
-2. Update Vm and install telnet, wget, and unzip and dependencies
+2. Update VM and install telnet, wget, and unzip and dependencies
 >[root@server ~]# yum update –y<br>
 >[root@server ~]# yum install -y vim telnet unzip wget git
 
