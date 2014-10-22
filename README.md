@@ -132,6 +132,8 @@ Create Application and Add
  - Click "+ Add Content" anc click on FAQ
  - Create an FAQ by filling in the question and response fields and then click Save
 
+7. Adding Items to the Catalog
+
 ###Configuring the Cloud Engine
 1. Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
 >/opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
@@ -206,9 +208,6 @@ Create Application and Add
  - Create a new catalof item or select an existing one
  - For the Provisioning Entry Point, set the value to /BAH/Service/Provisioning/StateMachines/ServiceProvision_Template/CatalogItemInitialization
 
-## Learn more
-
-Coming Soon
 
 ## List of our Repos
 
@@ -216,8 +215,7 @@ Coming Soon
  - ManageIQ
  - Marketplace
  - Cookbooks
- - ?
- - ??
+
 
 ## License
 
