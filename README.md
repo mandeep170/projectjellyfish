@@ -19,10 +19,8 @@ The Cloud Gateway is ManageIQ, and it enables integration between the cloud brok
 
 ###Installing the Cookbooks
 
-1. Log in to the appropriate VM as the root user
-```Bash
-ssh root@<ip-address> -i server-cert-key.pem
-```
+1. Log in to the appropriate VM as the root user <br>
+`ssh root@<ip-address> -i server-cert-key.pem`
 
 2. Update Vm and install telnet, wget, and unzip and dependencies
 ```Bash
