@@ -18,10 +18,10 @@ The Cloud Gateway is ManageIQ, and it enables integration between the cloud brok
  - [Marketplace] (https://github.com/booz-allen-hamilton/marketplace)
  - [Cloud Engine] (https://github.com/booz-allen-hamilton/servicemix)
  - [ManageIQ] (https://github.com/booz-allen-hamilton/manageiq)
- - Cookbooks
-    - [Marketplace] (https://github.com/booz-allen-hamilton/chef-marketplace)
-    - [ServiceMix] (https://github.com/booz-allen-hamilton/chef-servicemix)
-    - [ManageIQ] (https://github.com/booz-allen-hamilton/chef-manageiq)
+ - Chef Cookbooks:
+    - [Marketplace Cookbook] (https://github.com/booz-allen-hamilton/chef-marketplace)
+    - [ServiceMix Cookbook] (https://github.com/booz-allen-hamilton/chef-servicemix)
+    - [ManageIQ Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
 
 ## Get Started
 
