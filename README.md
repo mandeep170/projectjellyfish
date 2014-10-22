@@ -13,7 +13,12 @@ The Cloud Engine provides the core automation capabilities of the cloud broker. 
 **Cloud Gateway**<br>
 The Cloud Gateway is ManageIQ, and it enables integration between the cloud broker and cloud providers. The Cloud Gateway provides multi-cloud provisioning and management capabilities as serves as a central point for all the user's cloud resources.
 
+## List of our Repos
 
+ - Cloud Engine
+ - ManageIQ
+ - Marketplace
+ - Cookbooks
 
 ## Get Started
 
@@ -209,13 +214,6 @@ service servicemix-service restart
  - Create a new catalof item or select an existing one
  - For the Provisioning Entry Point, set the value to /BAH/Service/Provisioning/StateMachines/ServiceProvision_Template/CatalogItemInitialization
 
-
-## List of our Repos
-
- - Cloud Engine
- - ManageIQ
- - Marketplace
- - Cookbooks
 
 ## Requirements
 Jellyfish is built using three virtual machines for the three promary components. At a minimum, the cloud broker requires the following hardware, operating systems, and communications settings to support the suite of open source products.
