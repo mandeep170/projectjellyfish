@@ -34,8 +34,9 @@ The Cloud Gateway is ManageIQ, and it enables integration between the cloud brok
 
 5. Run the appropriate Cookbook
  - Cloud Portal
+```Bash
 >[root@server ~/chef-repo]# knife cookbook site install bah-marketplace
-
+```
  - Cloud Engine
 >[root@server ~/chef-repo]# knife cookbook site install servicemix
 
