@@ -31,7 +31,7 @@ Jellyfish is built using three virtual machines for the three primary components
 | Component          |Cloud Portal                                      |
 | --------           |:------------                                    |
 | Operating System   | RHEL 6.5 ot CentOS 6.5                           |
-| Memory             | 8 BG                                             |    
+| Memory             | 8 GB                                             |    
 | CPU                | 2                                                |
 | Disk               | 100 GB                                           |
 | TCP Ports          | 22,80,443,8181                                   |
@@ -43,7 +43,7 @@ Jellyfish is built using three virtual machines for the three primary components
 | Component          |Cloud Engine                                      |
 | --------           |:------------                                    |
 | Operating System   | RHEL 6.5 or CentOS 6.5                           |
-| Memory             | 8 BG                                             |    
+| Memory             | 8 GB                                             |    
 | CPU                | 2                                                |
 | Disk               | 50 GB                                            |
 | TCP Ports          | 22,8180,8181,8182,8183,8080,61616                |
@@ -55,7 +55,7 @@ Jellyfish is built using three virtual machines for the three primary components
 | Component          |Cloud Gateway                                      |
 | --------           |:------------                                    |
 | Operating System   | RHEL 6.5 or CentOS 6.5                           |
-| Memory             | 8 BG                                             |    
+| Memory             | 8 GB                                             |    
 | CPU                | 2                                                |
 | Disk               | 80 GB                                            |
 | TCP Ports          | 22,443,80                                        |
