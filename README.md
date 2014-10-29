@@ -1,7 +1,17 @@
-#Official Release October 22, 2014
-
-##Welcome to Project Jellyfish
+#Welcome to Project Jellyfish
 Jellyfish is Booz Allen Hamilton's hybrid, automated, and customizable cloud management and brokerage solution. Jellyfish helps administrators track resource utilization and costs, simplifies the process of requesting cloud resources, and reduces the time required to acquire services. As a result, organizations can effectively manage their increasing number of cloud resources to ensure compliance with security, cost, and time requirements.
+
+##Contents
+[Architecture] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#architecture)<br>
+[List of Our Repos] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#list-of-our-repos)<br>
+[Requirements] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#requirements)<br>
+[Installing the Cookbooks] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#installing-the-cookbooks)<br>
+[Configuring the Cloud Portal] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-portal)<br>
+[Configuring the Cloud Engine] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-engine)<br>
+[Configuring the Cloud Gateway] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-gateway)<br>
+[License] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#license)<br>
+[Export Notice] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#export-notice)
+
 ###Architecture
 Jellyfish is made up of three components, the Cloud Portal, the Cloud Engine, and the Cloud Gateway. Each component serves a specific function, and when integrated together, they provide a flexible framework with the ability to interface to multiple cloud providers behind a single portal.<br>
 **Cloud Portal**<br>
@@ -13,7 +23,7 @@ The Cloud Engine provides the core automation capabilities of the cloud broker. 
 **Cloud Gateway**<br>
 The Cloud Gateway is ManageIQ, and it enables integration between the cloud broker and cloud providers. The Cloud Gateway provides multi-cloud provisioning and management capabilities as serves as a central point for all the user's cloud resources.
 
-## List of our Repos
+## List of Our Repos
 
  - [Marketplace] (https://github.com/booz-allen-hamilton/marketplace)
  - [Cloud Engine] (https://github.com/booz-allen-hamilton/servicemix)
