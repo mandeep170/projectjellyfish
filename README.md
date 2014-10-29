@@ -11,7 +11,7 @@ Jellyfish is Booz Allen Hamilton's hybrid, automated, and customizable cloud man
 [Configuring the Cloud Gateway] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-gateway)<br>
 [License] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#license)<br>
 [Export Notice] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#export-notice)
-
+____
 ###Architecture
 Jellyfish is made up of three components, the Cloud Portal, the Cloud Engine, and the Cloud Gateway. Each component serves a specific function, and when integrated together, they provide a flexible framework with the ability to interface to multiple cloud providers behind a single portal.<br>
 **Cloud Portal**<br>
