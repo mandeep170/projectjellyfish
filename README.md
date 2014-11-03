@@ -40,7 +40,7 @@ Jellyfish is built using three virtual machines for the three primary components
 
 | Component          |Cloud Portal                                      |
 | --------           |:------------                                    |
-| Operating System   | RHEL 6.5 ot CentOS 6.5                           |
+| Operating System   | RHEL 6.5 or CentOS 6.5                           |
 | Memory             | 8 GB                                             |    
 | CPU                | 2                                                |
 | Disk               | 100 GB                                           |
