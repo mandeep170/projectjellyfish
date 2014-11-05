@@ -84,21 +84,23 @@ Jellyfish is built using three virtual machines for the three primary components
 
 ##Installing the Cookbooks
 
-1. Log in to the appropriate VM as the root user
+1.Log in to the appropriate VM as the root user
+
 ```Bash
 ssh root@<ip-address> -i server-cert-key.pem
 ```
 
-2. Update VM and install telnet, wget, and unzip and dependencies
+2.Update VM and install telnet, wget, and unzip and dependencies
 ```Bash
 [root@server ~]# yum update –y<br>
 [root@server ~]# yum install -y vim telnet unzip wget git
 ```
 
-3. Follow the specific instructions within the cookbook repo:
+3.Follow the specific instructions within the cookbook repo:
  - [Marketplace Cookbook] (https://github.com/booz-allen-hamilton/chef-marketplace)
  - [Cloud Engine Cookbook] (https://github.com/booz-allen-hamilton/chef-servicemix)
  - [Cloud Gateway Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
+
 
 ##Configuring the Marketplace
 1. Configure Communications
