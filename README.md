@@ -1,21 +1,30 @@
-#Welcome to Project Jellyfish
-Jellyfish is Booz Allen Hamilton's hybrid, automated, and customizable cloud management and brokerage solution. Jellyfish helps administrators track resource utilization and costs, simplifies the process of requesting cloud resources, and reduces the time required to acquire services. As a result, organizations can effectively manage their increasing number of cloud resources to ensure compliance with security, cost, and time requirements.
+#Project Jellyfish: An Open Source Cloud Services Broker Solution
+###Why Jellyfish
+Jellyfish play an important role in the oceanic food chain, and are responsible for helping maintain balance in the ocean’s delicate, complex ecosystem. They occupy every major ocean in the world, and are adept at withstanding a broad range of salinities and temperatures. Today’s organizations need equal versatility in its cloud service brokering. With Project Jellyfish, you can provision and manage all your on- and off-premise cloud services from a centralized, open source e-commerce platform.
+
+###Why an Open Source Cloud Broker
+Cloud computing has emerged as one of the most valuable technologies for managing the IT ecosystem. Yet the myriad of cloud services available can be overwhelming to administer effectively. The lack of standardization and cost tracking capabilities, as well as the risk of vendor lock-in, adds to your company’s everyday financial and operational challenges. <br>
+
+*To help resolve these issues,* Booz Allen Hamilton developed Project Jellyfish, an open source cloud services broker solution that unifies your disparate cloud resources, including Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). This means automated and rapid service delivery, comprehensive performance and cost monitoring, standardized configuration management, and customizable workflows across public, private, or hybrid cloud platforms for overall improved business operations. Using an intuitive, e-commerce interface, Project Jellyfish provides a holistic reach into your entire inventory of virtualized assets — from the full catalog of services, to governance and compliance, to chargebacks. <br>
+
+*The result is* a rapid self-service marketplace, reusable code, scalable infrastructure, and the ability to accurately track and report your company’s cloud services usage and costs. Project Jellyfish is revolutionizing today’s complex cloud ecosystem through open source to drive innovation, quality and efficiency. 
 
 ##Contents
 [Architecture] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#architecture)<br>
 [List of Our Repos] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#list-of-our-repos)<br>
 [Requirements] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#requirements)<br>
 [Installing the Cookbooks] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#installing-the-cookbooks)<br>
-[Configuring the Cloud Portal] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-portal)<br>
+[Configuring the Marketplace] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-portal)<br>
 [Configuring the Cloud Engine] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-engine)<br>
 [Configuring the Cloud Gateway] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-gateway)<br>
 [License] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#license)<br>
 [Export Notice] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#export-notice)
 ____
-###Architecture
-Jellyfish is made up of three components, the Cloud Portal, the Cloud Engine, and the Cloud Gateway. Each component serves a specific function, and when integrated together, they provide a flexible framework with the ability to interface to multiple cloud providers behind a single portal.<br>
-**Cloud Portal**<br>
-The Cloud Portal is a single pane of glass that users can use to browse and order a variety of IaaS, PaaS, and SaaS resources from the customizable storefront catalog. It also serves as a single point of entry for administrators to login and manage marketplace resources and user accounts. The Cloud Portal is built using Drupal 7.24.<br>
+##Architecture
+Jellyfish is made up of three components, the Marketplace, the Cloud Engine, and the Cloud Gateway. Each component serves a specific function, and when integrated together, they provide a flexible framework with the ability to interface to multiple cloud providers behind a single portal.<br>
+
+**Marketplace**<br>
+The Marketplace is a single pane of glass that users can use to browse and order a variety of IaaS, PaaS, and SaaS resources from the customizable storefront catalog. It also serves as a single point of entry for administrators to login and manage resources and user accounts. The Marketplace is built using Drupal 7.24.<br>
 
 **Cloud Engine**<br>
 The Cloud Engine provides the core automation capabilities of the cloud broker. The Jellyfish Cloud Engine uses  Apache ServiceMix 5.1.2 as the messaging engine and Chef as the configuration management engine.<br>
@@ -36,7 +45,7 @@ The Cloud Gateway is ManageIQ, and it enables integration between the cloud brok
 ## Requirements
 Jellyfish is built using three virtual machines for the three primary components. At a minimum, the cloud broker requires the following hardware, operating systems, and communications settings to support the suite of open source products.
 
-**Cloud Portal Requirements**
+**Marketplace Requirements**
 
 | Component          |Cloud Portal                                      |
 | --------           |:------------                                    |
@@ -73,26 +82,27 @@ Jellyfish is built using three virtual machines for the three primary components
 | Network Access     | Access to cloud providers and broker services (443,8183)   |
 
 
-
-## Get Started
-
-###Installing the Cookbooks
+##Installing the Cookbooks
 
 1. Log in to the appropriate VM as the root user
->ssh root@<ip-address> -i server-cert-key.pem
+```Bash
+ssh root@<ip-address> -i server-cert-key.pem
+```
 
 2. Update VM and install telnet, wget, and unzip and dependencies
->[root@server ~]# yum update –y<br>
->[root@server ~]# yum install -y vim telnet unzip wget git
+```Bash
+[root@server ~]# yum update –y<br>
+[root@server ~]# yum install -y vim telnet unzip wget git
+```
 
 3. Follow the specific instructions within the cookbook repo:
  - [Marketplace Cookbook] (https://github.com/booz-allen-hamilton/chef-marketplace)
- - [ServiceMix Cookbook] (https://github.com/booz-allen-hamilton/chef-servicemix)
- - [ManageIQ Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
+ - [Cloud Engine Cookbook] (https://github.com/booz-allen-hamilton/chef-servicemix)
+ - [Cloud Gateway Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
 
-###Configuring the Cloud Portal
+##Configuring the Marketplace
 1. Configure Communications
- - Within the Cloud Portal, navigate to Store>Broker Order Communications
+ - Within the Marketplace, navigate to Store>Broker Order Communications
  - Enter *http://CLOUD_ENGINE_IP:8183/orders/create/* in "Transmit URL"
  - Enter the ServiceMix Username and Password
  - Also on this page, note the Receive-Api Key required to configure the Cloud Engine
@@ -171,9 +181,11 @@ Create Application and Add
 
 7. Adding Items to the Catalog
 
-###Configuring the Cloud Engine
+##Configuring the Cloud Engine
 1. Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
->/opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
+```Bash
+/opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
+```
 
 2. Make the following changes to the file, then write+exit:
  - Insert the Cloud Portal, Engine, or Gateway IP addresses where they are referenced
@@ -184,7 +196,7 @@ Create Application and Add
 service servicemix-service restart
 ```
 
-###Configuring the Cloud Gateway
+##Configuring the Cloud Gateway
 1. Adding Providers
  - Cloud Providers
     - Navigate to Clouds>Providers
