@@ -47,7 +47,7 @@ Jellyfish is built using three virtual machines for the three primary components
 
 **Marketplace Requirements**
 
-| Component          |Cloud Portal                                      |
+| Component          |Marketplace                                       |
 | --------           |:------------                                    |
 | Operating System   | RHEL 6.5 or CentOS 6.5                           |
 | Memory             | 8 GB                                             |    
