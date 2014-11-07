@@ -170,11 +170,11 @@ service servicemix-service restart
 
 ##Configuring the Cloud Gateway
 1) Adding Providers
-    - For cloud providers, navigate to Clouds>Providers; for infrastructure providers, navigate to Infrastructure>Providers
-    - Click on the Configuration drop down menu, and select "+ add a New Cloud Provider," or "+ add a New Infrastructure Provider"
-    - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in the corresponding fields
-    - In the Credentials section, enter your security information for the provider you selected
-    - Click Validate and then click Add
+ - For cloud providers, navigate to Clouds>Providers; for infrastructure providers, navigate to Infrastructure>Providers
+ - Click on the Configuration drop down menu, and select "+ add a New Cloud Provider," or "+ add a New Infrastructure Provider"
+ - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in the corresponding fields
+ - In the Credentials section, enter your security information for the provider you selected
+ - Click Validate and then click Add
 
 2) Adding Catalog Items
  - Navigate to Services>Catalogs
