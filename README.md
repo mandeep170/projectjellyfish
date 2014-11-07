@@ -84,32 +84,32 @@ Jellyfish is built using three virtual machines for the three primary components
 
 ##Installing the Cookbooks
 
-1.Log in to the appropriate VM as the root user
+1) Log in to the appropriate VM as the root user
 
 ```Bash
 ssh root@<ip-address> -i server-cert-key.pem
 ```
 
-2.Update VM and install telnet, wget, and unzip and dependencies
+2) Update VM and install telnet, wget, and unzip and dependencies
 ```Bash
 [root@server ~]# yum update –y<br>
 [root@server ~]# yum install -y vim telnet unzip wget git
 ```
 
-3.Follow the specific instructions within the cookbook repo:
+3) Follow the specific instructions within the cookbook repo:
  - [Marketplace Cookbook] (https://github.com/booz-allen-hamilton/chef-marketplace)
  - [Cloud Engine Cookbook] (https://github.com/booz-allen-hamilton/chef-servicemix)
  - [Cloud Gateway Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
 
 
 ##Configuring the Marketplace
-1. Configure Communications
+1) Configure Communications
  - Navigate to Store>Broker Order Communications
  - Enter *http://CLOUD_ENGINE_IP:8183/orders/create/* in "Transmit URL"
  - Enter the ServiceMix Username and Password
  - Note the Receive-Api Key required to configure the Cloud Engine
 
-2. Add/Maintain a Catalog of Items
+2) Add/Maintain a Catalog of Items
 Create Application and Add
  - Navigate to Store>Products>Add a Product
  - Choose the type of item you are adding to the catalog
@@ -120,19 +120,19 @@ Create Application and Add
  - Click "Add Existing Product" and enter the SKU for the item you created
  - Click "Add Product" and then click Save
 
-3. Create a Form Email Configuration
- - Navigate to Configuration > Workflow > Rules
+3) Create a Form Email Configuration
+ - Navigate to Configuration>Workflow>Rules
  - On the Rules page, under Active Rules, locate the rules titled "Email when project_req set to Approved," and click on the rule to edit
  - Locate the Actions elements table and click the "+Add Action" button
  - On the "Add a New Action" page, click on the dropdown menu to add a variable
  - Locate "Send Mail" from the System block and click on it
  - On the Add a New Action page, add the recipient's email, the subject, and the body, and click Save *(add "[node:field-app-code]" at the end of the subject to add the project app code)
 
-4. Update CRON Job Run Frequency
+4) Update CRON Job Run Frequency
  - Navigate to Configuration>System>Cron Settings>Settings
  - Under "Single Job Settings," locate the job called "bah_order_com_cron," and adjust to your desired schedule and click Save
 
-5. LDAP Configuration
+5) LDAP Configuration
  - Navigate to Configuration>People>LDAP Configuration
  - Settings Tab
     - The Settings page is the default tab when accessing the LDAP Configuration. All items on the Settings page should remain default.
@@ -147,42 +147,34 @@ Create Application and Add
  - Project Configuration
     - When a new project has been requested, the marketplace must be updated to include the project APP code and the funding amount available for the project. Navigate to Content>Add Content>Project to create a new project and populate the appropriate title, organic group credits, and application code information.
 
-6. Updating FAQs
+6) Updating FAQs
  - Navigate to Content
  - Select "FAQ" from the Type drop down menu and click Filter
  - Click "+ Add Content" and click on FAQ
  - Create an FAQ by filling in the question and response fields and then click Save
 
 ##Configuring the Cloud Engine
-1. Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
+1) Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
 ```Bash
 /opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
 ```
-2. Make the following changes to the file, then write+exit:
+2) Make the following changes to the file, then write+exit:
  - Insert the Marketplace, Engine, or Gateway IP addresses where they are referenced
  - Set "marketplace.restKey" to the Receive-API Key from the Broker Order Communications Page in the Marketplace
-3. Restart the Cloud Engine
+3) Restart the Cloud Engine
 ```Bash
 service servicemix-service restart
 ```
 
 ##Configuring the Cloud Gateway
-1. Adding Providers
- - Cloud Providers
-    - Navigate to Clouds>Providers
-    - Click on the Configuration drop down menu, and select "+ add a New Cloud Provider"
-    - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in corresponding fields
+1) Adding Providers
+    - For cloud providers, navigate to Clouds>Providers; for infrastructure providers, navigate to Infrastructure>Providers
+    - Click on the Configuration drop down menu, and select "+ add a New Cloud Provider," or "+ add a New Infrastructure Provider"
+    - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in the corresponding fields
     - In the Credentials section, enter your security information for the provider you selected
     - Click Validate and then click Add
 
- - Infrastructure Providers
-    - Navigate to Infrastructure>Providers
-    - Click on the Configuration drop down menu, and select "+ add a New Infrastructure Provider"
-    - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in corresponding fields
-    - In the Credentials section, enter your security information for the provider you selected
-    - Click Validate and then click Add
-
-2. Adding Catalog Items
+2) Adding Catalog Items
  - Navigate to Services>Catalogs
  - Click on the Catalog Items accordion tab
  - Click on the Configuration drop down menu, and select "+ add a New Catalog Item"
@@ -190,42 +182,33 @@ service servicemix-service restart
  - In the Basic Info section, fill in the item name and description. If you would like to assign the item to a catalog, check the "Display in Catalog" box, and fill in the required information.
  - Go to the Request Info section. Navigate through each sub-tab, and fill in the information required by the provider (at a minimum, field names marked with an asterick are required)
  - Click Add
-3. Configuring Script to Update Cloud Engine
+
+3) Configuring Script to Update Cloud Engine
  - Navigate to Automate>Explorer
  - Click on the Datastore folder
     - Select "Add a New Domain" from the Configuration drop down menu
-    - Enter "BAH" for the Name
-    - Enter "Booz Allen Hamilton Customization" for the Description
+    - Enter "BAH" for the name and "Booz Allen Hamilton Customization" for the description
     - Check enabled and click Save
  - Navigate to ManageIQ>Service>Provisioning>StatsMachines>Methods
  - Select the Instances tab
     - Select "Add a New Instance" from the Configuration drop down menu
-    - Enter "update_servicemix_and_chef" for the Name and the Display Name
-    - Go to the Fields section
-      - Find "execute" under the Name column
-      - Enter update_servicemix_and_chef for the Value
-      - Click Add
+    - Enter "update_servicemix_and_chef" for the name and the display name
+    - In the Fields section, find "execute" under the Name column and enter update_servicemix_and_chef for the value, then click Add
  - Navigate to ManageIQ>Service>Provisioning>StateMachines>Methods
  - Select the Methods tab
-    - Click on Configuration -> Add a New Method
-    - Enter update_servicemix_and_chef for the Name and Display Name
-    - For the Location, select inline
-    - Under Data, paste the code from [update_servicemix_and_chef code link]
-    - Click Add
+    - Click on Configuration>Add a New Method
+    - Enter update_servicemix_and_chef for the name and display name
+    - For the location, select inline, and under data, paste the code from [update_servicemix_and_chef code link] and click Add
  - Navigate to ManageIQ>Service>Provisioning>StateMachines>ServiceProvision_Template>CatalogItemInitialization
-    - Click on Configuration -> Copy this Instance
+    - Click on Configuration>Copy this Instance
     - For the To Domain value, select BAH from the drop down list
-    - Check the Copy to same path
-    - Click Copy
+    - Check Copy to same path and click Copy
  - Navigate to ManageIQ>Service>Provisioning>StateMachines>ServiceProvision_Template>CatalogItemInitialization
-    - Select "Edit this Instance" in the Configuration drop down menu
-    - Go to the Fields section
-    - Under the Name column, find post1
-    - For the Value, enter /Service/Provisioning/StateMachines/Methods/update_servicemix_and_chef
+    - Select Edit this Instance in the Configuration drop down menu
+    - In the Fields section under the Name column, find post1 and for the value, enter /Service/Provisioning/StateMachines/Methods/update_servicemix_and_chef
     - Click Save
  - Create a new catalog item or select an existing one
  - For the Provisioning Entry Point, set the value to /BAH/Service/Provisioning/StateMachines/ServiceProvision_Template/CatalogItemInitialization
-
 
 ## License
 
