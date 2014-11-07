@@ -114,40 +114,21 @@ Create Application and Add
  - Navigate to Store>Products>Add a Product
  - Choose "Create Application" or choose the type of item you are adding to the catalog
  - Enter the specifics for the Application Product
-    - Enter a unique Product SKU
-    - Enter the title of the application catalog
-    - Enter the price
-    - Click on "Active" for status
-    - Select the size of your product
-    - Choose the server type of the project
-    - Choose a server size
-    - Choose a CPU
-    - Choose the size of RAM memory
-    - Choose the OS
-    - Choose the Networking option
-    - Choose the Elasticity option
-    - Choose the Storage option
  - Click "Save Product"
- - Confirm the product was added
-    - Navigate to Store>Products
-    - Locate and confirm the product was added to the store
-
+ - Confirm the product was added in Store>Products
  - Navigate to Content>Add Content>Product
  - Enter the Product Name
  - Enter a Description for the product
  - Click "Choose File" and upload an image for the product
- - Click "Add Existing Product"
-   - In the product field, enter the SKU for the item you created
-   - Click "Add Product"
- - Click "Save"
- - Visit the Marketplace Catalog and confirm the product you added is located in the catalog
+ - Click "Add Existing Product" and enter the SKU for the item you created
+ - Click "Add Product" and then click "Save"
 
 3. Create a Form Email Configuration
  - Navigate to Configuration > Workflow > Rules
  - On the Rules page, under Active Rules, locate the rules titled "Email when project_req set to Approved"
    - Click on the rule to edit
  - In the rule editing screen, locate the Actions elements table and click the "+Add Action" button
- - On the Add a New Action page, click on the dropdown menu to add a variable
+ - On the "Add a New Action" page, click on the dropdown menu to add a variable
    - Locate "Send Mail" from the System block and click on it
  - On the Add a New Action page, add the following attributes:
     - Recipient's email
@@ -181,8 +162,6 @@ Create Application and Add
  - Click "+ Add Content" anc click on FAQ
  - Create an FAQ by filling in the question and response fields and then click Save
 
-7. Adding Items to the Catalog
-
 ##Configuring the Cloud Engine
 1. Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
 ```Bash
@@ -205,22 +184,21 @@ service servicemix-service restart
     - Click on the Configuration drop down menu, and select "+ add a New Cloud Provider"
     - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in corresponding fields
     - In the Credentials section, enter your security information for the provider you selected
-    - Click Validate
-    - Click Add
+    - Click Validate and then click Add
 
- - Infrstructure Providers
+ - Infrastructure Providers
     - Navigate to Infrastructure>Providers
     - Click on the Configuration drop down menu, and select "+ add a New Infrastructure Provider"
     - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in corresponding fields
     - In the Credentials section, enter your security information for the provider you selected
-    - Click Validate
-    - Click Add
+    - Click Validate and then click Add
+
 2. Adding Catalog Items
  - Navigate to Services>Catalogs
  - Click on the Catalog Items accordion tab
  - Click on the Configuration drop down menu, and select "+ add a New Catalog Item"
  - Select a Catalog Item Type from the drop down menu
- - In the Basic Info section, fill in the item name and description. If you would like to assign the item to a catalog, check with "Display in Catalog" box, and fill in the required information.
+ - In the Basic Info section, fill in the item name and description. If you would like to assign the item to a catalog, check the "Display in Catalog" box, and fill in the required information.
  - Go to the Request Info section. Navigate through each sub-tab, and fill in the information required by the provider (at a minimum, field names marked with an asterick are required)
  - Click Add
 3. Configuring Script to Update Cloud Engine
@@ -229,8 +207,7 @@ service servicemix-service restart
     - Select "Add a New Domain" from the Configuration drop down menu
     - Enter "BAH" for the Name
     - Enter "Booz Allen Hamilton Customization" for the Description
-    - Check enabled
-    - Click Save
+    - Check enabled and click Save
  - Navigate to ManageIQ>Service>Provisioning>StatsMachines>Methods
  - Select the Instances tab
     - Select "Add a New Instance" from the Configuration drop down menu
@@ -242,8 +219,7 @@ service servicemix-service restart
  - Navigate to ManageIQ>Service>Provisioning>StateMachines>Methods
  - Select the Methods tab
     - Click on Configuration -> Add a New Method
-    - Enter update_servicemix_and_chef for the Name
-    - Enter update_servicemix_and_chef for the Display Name
+    - Enter update_servicemix_and_chef for the Name and Display Name
     - For the Location, select inline
     - Under Data, paste the code from [update_servicemix_and_chef code link]
     - Click Add
@@ -258,7 +234,7 @@ service servicemix-service restart
     - Under the Name column, find post1
     - For the Value, enter /Service/Provisioning/StateMachines/Methods/update_servicemix_and_chef
     - Click Save
- - Create a new catalof item or select an existing one
+ - Create a new catalog item or select an existing one
  - For the Provisioning Entry Point, set the value to /BAH/Service/Provisioning/StateMachines/ServiceProvision_Template/CatalogItemInitialization
 
 
