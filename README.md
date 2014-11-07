@@ -158,9 +158,11 @@ Create Application and Add
 ```Bash
 /opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
 ```
+
 2) Make the following changes to the file, then write+exit:
  - Insert the Marketplace, Engine, or Gateway IP addresses where they are referenced
  - Set "marketplace.restKey" to the Receive-API Key from the Broker Order Communications Page in the Marketplace
+
 3) Restart the Cloud Engine
 ```Bash
 service servicemix-service restart
