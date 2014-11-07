@@ -200,7 +200,8 @@ service servicemix-service restart
  - Select the Methods tab
     - Click on Configuration>Add a New Method
     - Enter update_servicemix_and_chef for the name and display name
-    - For the location, select inline, and under data, paste the code from [update_servicemix_and_chef code link] and click Add
+    - For the location, select inline
+    - Under data, paste the code from [update_servicemix_and_chef code link], add the required information where it is requested within the script, and click Add
  - Navigate to ManageIQ>Service>Provisioning>StateMachines>ServiceProvision_Template>CatalogItemInitialization
     - Click on Configuration>Copy this Instance
     - For the To Domain value, select BAH from the drop down list
