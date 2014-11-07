@@ -104,42 +104,33 @@ ssh root@<ip-address> -i server-cert-key.pem
 
 ##Configuring the Marketplace
 1. Configure Communications
- - Within the Marketplace, navigate to Store>Broker Order Communications
+ - Navigate to Store>Broker Order Communications
  - Enter *http://CLOUD_ENGINE_IP:8183/orders/create/* in "Transmit URL"
  - Enter the ServiceMix Username and Password
- - Also on this page, note the Receive-Api Key required to configure the Cloud Engine
+ - Note the Receive-Api Key required to configure the Cloud Engine
 
 2. Add/Maintain a Catalog of Items
 Create Application and Add
  - Navigate to Store>Products>Add a Product
- - Choose "Create Application" or choose the type of item you are adding to the catalog
- - Enter the specifics for the Application Product
- - Click "Save Product"
+ - Choose the type of item you are adding to the catalog
+ - Enter the required information and click Save
  - Confirm the product was added in Store>Products
  - Navigate to Content>Add Content>Product
- - Enter the Product Name
- - Enter a Description for the product
- - Click "Choose File" and upload an image for the product
+ - Enter the product name, description, and upload an image for the product
  - Click "Add Existing Product" and enter the SKU for the item you created
- - Click "Add Product" and then click "Save"
+ - Click "Add Product" and then click Save
 
 3. Create a Form Email Configuration
  - Navigate to Configuration > Workflow > Rules
- - On the Rules page, under Active Rules, locate the rules titled "Email when project_req set to Approved"
-   - Click on the rule to edit
- - In the rule editing screen, locate the Actions elements table and click the "+Add Action" button
+ - On the Rules page, under Active Rules, locate the rules titled "Email when project_req set to Approved," and click on the rule to edit
+ - Locate the Actions elements table and click the "+Add Action" button
  - On the "Add a New Action" page, click on the dropdown menu to add a variable
-   - Locate "Send Mail" from the System block and click on it
- - On the Add a New Action page, add the following attributes:
-    - Recipient's email
-    - Subject of the email (add the following indentifier at the end of the  email to add the project add code [node:field-app-code]
-    - Add the body of the email
-    - Click Save
+ - Locate "Send Mail" from the System block and click on it
+ - On the Add a New Action page, add the recipient's email, the subject, and the body, and click Save *(add "[node:field-app-code]" at the end of the subject to add the project app code)
 
 4. Update CRON Job Run Frequency
- - On the administrative toolbar on the top of the page, navigate to Configuration>System>Cron Settings>Settings
- - On the Settings page, under "Single Job Settings," locate the job called "bah_order_com_cron," and adjust to your desired schedule
- - Click Save.  If the changes are successful, a confirmation message will appear at the top of the screen. If you do not see this message, refresh the page, check "bah_order_com_cron," and try again.
+ - Navigate to Configuration>System>Cron Settings>Settings
+ - Under "Single Job Settings," locate the job called "bah_order_com_cron," and adjust to your desired schedule and click Save
 
 5. LDAP Configuration
  - Navigate to Configuration>People>LDAP Configuration
@@ -152,14 +143,14 @@ Create Application and Add
  - Authentication Tab
     - Authenticate LDAP users
  - Authorization
-    - This tab allows for Active Directory Security Groups to be mapped to roles and organic groups defines within Drupal and providing role Based Access to the marketplace
+    - This tab allows for Active Directory Security Groups to be mapped to roles and organic groups defined within Drupal and providing role Based Access to the marketplace
  - Project Configuration
-    - When a new project has been requested, the marketplace must be updated to include the project APP code and the funding amount available for the project. This creation will allow associated users to access funds and the rights to provision the environment. Navigate to Content > Add Content > Project to create a new project and populate the appropriate title, organic group credits, and application code information.
+    - When a new project has been requested, the marketplace must be updated to include the project APP code and the funding amount available for the project. Navigate to Content>Add Content>Project to create a new project and populate the appropriate title, organic group credits, and application code information.
 
 6. Updating FAQs
- - In the toolbar, navigate to Content
+ - Navigate to Content
  - Select "FAQ" from the Type drop down menu and click Filter
- - Click "+ Add Content" anc click on FAQ
+ - Click "+ Add Content" and click on FAQ
  - Create an FAQ by filling in the question and response fields and then click Save
 
 ##Configuring the Cloud Engine
