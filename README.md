@@ -1,4 +1,5 @@
 #Project Jellyfish:<br>An Open Source Cloud Services Broker Solution
+![logo](https://cloud.githubusercontent.com/assets/8397443/4961704/fa75cf24-66d1-11e4-90d8-2854ab29f6e8.PNG)
 ###Why Jellyfish
 Jellyfish play an important role in the oceanic food chain, and are responsible for helping maintain balance in the ocean’s delicate, complex ecosystem. They occupy every major ocean in the world, and are adept at withstanding a broad range of salinities and temperatures. Today’s organizations need equal versatility in its cloud service brokering. With Project Jellyfish, you can provision and manage all your on- and off-premise cloud services from a centralized, open source e-commerce platform.
 
