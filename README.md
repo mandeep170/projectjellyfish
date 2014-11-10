@@ -94,7 +94,7 @@ ssh root@<ip-address> -i server-cert-key.pem
 
 2) Update VM and install telnet, wget, and unzip and dependencies
 ```Bash
-[root@server ~]# yum update –y<br>
+[root@server ~]# yum update –y
 [root@server ~]# yum install -y vim telnet unzip wget git
 ```
 
