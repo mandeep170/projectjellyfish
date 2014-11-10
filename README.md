@@ -1,5 +1,5 @@
 ##[Click here to access the Project Jellyfish homepage] (http://booz-allen-hamilton.github.io/projectjellyfish/)
-![logo](https://cloud.githubusercontent.com/assets/8397443/4984096/859cb11c-6920-11e4-8e7d-da0a2512752a.png)
+![logo](https://cloud.githubusercontent.com/assets/8397443/4984316/9fbef166-6922-11e4-9e7e-74d3fe88c9b4.png)
 <br>
 <br>
 ##Project Jellyfish: An Open Source Cloud Services Broker Solution
