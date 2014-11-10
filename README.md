@@ -1,4 +1,4 @@
-![logo](https://cloud.githubusercontent.com/assets/8397443/4984004/bc253bce-691f-11e4-80cc-5b2bc316a71e.png)
+![logo](https://cloud.githubusercontent.com/assets/8397443/4984096/859cb11c-6920-11e4-8e7d-da0a2512752a.png)
 ##Project Jellyfish:<br>An Open Source Cloud Services Broker Solution
 ---
 ###Why Jellyfish
