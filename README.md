@@ -204,16 +204,16 @@ service servicemix-service restart
     - Enter update_servicemix_and_chef for the name and display name
     - For the location, select inline
     - Under data, paste the code from [update_servicemix_and_chef code link], add the required information where it is requested within the script, and click Add
- - Navigate to ManageIQ>Service>Provisioning>StateMachines>ServiceProvision_Template>CatalogItemInitialization
+ - Navigate to ManageIQ>Service>Provisioning>StateMachines>ServiceProvision_Template> CatalogItemInitialization
     - Click on Configuration>Copy this Instance
     - For the To Domain value, select BAH from the drop down list
     - Check Copy to same path and click Copy
- - Navigate to ManageIQ>Service>Provisioning>StateMachines>ServiceProvision_Template>CatalogItemInitialization
+ - Navigate to ManageIQ>Service>Provisioning>StateMachines>ServiceProvision_Template> CatalogItemInitialization
     - Select Edit this Instance in the Configuration drop down menu
     - In the Fields section under the Name column, find post1 and for the value, enter /Service/Provisioning/StateMachines/Methods/update_servicemix_and_chef
     - Click Save
  - Create a new catalog item or select an existing one
- - For the Provisioning Entry Point, set the value to /BAH/Service/Provisioning/StateMachines/ServiceProvision_Template/CatalogItemInitialization
+ - For the Provisioning Entry Point, set the value to /BAH/Service/Provisioning/StateMachines/ServiceProvision_Template/ CatalogItemInitialization
 
 ## License
 
