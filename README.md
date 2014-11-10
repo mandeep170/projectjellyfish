@@ -55,7 +55,7 @@ Jellyfish is built using three virtual machines for the three primary components
 | Memory             | 8 GB                                             |    
 | CPU                | 2                                                |
 | Disk               | 100 GB                                           |
-| TCP Ports          | 22,80,443,8181                                   |
+| TCP Ports          | 22, 80, 443, 8181                                   |
 | UDP Ports          |                                                  |
 | Network Access     | Public facing and access to broker services (8183)  |
 
@@ -67,9 +67,9 @@ Jellyfish is built using three virtual machines for the three primary components
 | Memory             | 8 GB                                             |    
 | CPU                | 2                                                |
 | Disk               | 50 GB                                            |
-| TCP Ports          | 22,8180,8181,8182,8183,8080,61616                |
+| TCP Ports          | 22, 8180, 8181, 8182, 8183, 8080, 61616                |
 | UDP Ports          | 61616                                            |
-| Network Access     | Access to broker services (8180,8181,8182,8080,61616)      |
+| Network Access     | Access to broker services (8180, 8181, 8182, 8080, 61616)      |
 
 **Cloud Gateway Requirements**
 
@@ -79,9 +79,9 @@ Jellyfish is built using three virtual machines for the three primary components
 | Memory             | 8 GB                                             |    
 | CPU                | 2                                                |
 | Disk               | 80 GB                                            |
-| TCP Ports          | 22,443,80                                        |
+| TCP Ports          | 22, 443, 80                                        |
 | UDP Ports          |                                                  |
-| Network Access     | Access to cloud providers and broker services (443,8183)   |
+| Network Access     | Access to cloud providers and broker services (443, 8183)   |
 
 
 ##Installing the Cookbooks
