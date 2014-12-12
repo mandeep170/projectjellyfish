@@ -97,7 +97,7 @@ ssh root@<ip-address> -i server-cert-key.pem
 2) Update VM and install telnet, wget, and unzip and dependencies
 ```Bash
 [root@server ~]# yum update –y
-[root@server ~]# yum install -y vim telnet unzip wget git
+[root@server ~]# yum install -y vim unzip wget git
 ```
 
 3) Follow the specific instructions within the cookbook repo:
@@ -105,91 +105,31 @@ ssh root@<ip-address> -i server-cert-key.pem
  - [Cloud Engine Cookbook] (https://github.com/booz-allen-hamilton/chef-servicemix)
  - [Cloud Gateway Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
 
-
-##Configuring the Marketplace
-1) Configure Communications
- - Navigate to Store>Broker Order Communications
- - Enter *http://CLOUD_ENGINE_IP:8183/orders/create/* in "Transmit URL"
- - Enter the ServiceMix Username and Password
- - Note the Receive-Api Key required to configure the Cloud Engine
-
-2) Add/Maintain a Catalog of Items
-Create Application and Add
- - Navigate to Store>Products>Add a Product
- - Choose the type of item you are adding to the catalog
- - Enter the required information and click Save
- - Confirm the product was added in Store>Products
- - Navigate to Content>Add Content>Product
- - Enter the product name, description, and upload an image for the product
- - Click "Add Existing Product" and enter the SKU for the item you created
- - Click "Add Product" and then click Save
-
-3) Create a Form Email Configuration
- - Navigate to Configuration>Workflow>Rules
- - On the Rules page, under Active Rules, locate the rules titled "Email when project_req set to Approved," and click on the rule to edit
- - Locate the Actions elements table and click the "+Add Action" button
- - On the "Add a New Action" page, click on the dropdown menu to add a variable
- - Locate "Send Mail" from the System block and click on it
- - On the Add a New Action page, add the recipient's email, the subject, and the body, and click Save *(add "[node:field-app-code]" at the end of the subject to add the project app code)
-
-4) Update CRON Job Run Frequency
- - Navigate to Configuration>System>Cron Settings>Settings
- - Under "Single Job Settings," locate the job called "bah_order_com_cron," and adjust to your desired schedule and click Save
-
-5) LDAP Configuration
- - Navigate to Configuration>People>LDAP Configuration
- - Settings Tab
-    - The Settings page is the default tab when accessing the LDAP Configuration. All items on the Settings page should remain default.
- - Servers tab
-    - You can add multiple LDAP Servers to use with the LDAP Authentication module. Server settings can be edited via the "List" tab once edited.
- - User Tab
-    - This tab specifically addresses how user accounts are provisioned, synched, and updated between Drupal and Active Directory. In this envoironment, Drupal only pulls information from Active Directory so the BASIC PROVISIONING TO LDAP SETTINGS are left at their default value
- - Authentication Tab
-    - Authenticate LDAP users
- - Authorization
-    - This tab allows for Active Directory Security Groups to be mapped to roles and organic groups defined within Drupal and providing role Based Access to the marketplace
- - Project Configuration
-    - When a new project has been requested, the marketplace must be updated to include the project APP code and the funding amount available for the project. Navigate to Content>Add Content>Project to create a new project and populate the appropriate title, organic group credits, and application code information.
-
-6) Updating FAQs
- - Navigate to Content
- - Select "FAQ" from the Type drop down menu and click Filter
- - Click "+ Add Content" and click on FAQ
- - Create an FAQ by filling in the question and response fields and then click Save
-
-##Configuring the Cloud Engine
-1) Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
-```Bash
-/opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
-```
-
-2) Make the following changes to the file, then write+exit:
- - Insert the Marketplace, Engine, or Gateway IP addresses where they are referenced
- - Set "marketplace.restKey" to the Receive-API Key from the Broker Order Communications Page in the Marketplace
-
-3) Restart the Cloud Engine
-```Bash
-service servicemix-service restart
-```
-
-##Configuring the Cloud Gateway
+##Configuring the Cloud Gateway - ManageIQ
 1) Adding Providers
- - For cloud providers, navigate to Clouds>Providers; for infrastructure providers, navigate to Infrastructure>Providers
+ - For cloud providers (i.e. AWS), navigate to Clouds>Providers; for infrastructure providers (i.e. VMware), navigate to Infrastructure>Providers
  - Click on the Configuration drop down menu, and select "+ add a New Cloud Provider," or "+ add a New Infrastructure Provider"
  - In the Basic Information section, add a name, select a provider type from the drop down menu, and fill in the corresponding fields
  - In the Credentials section, enter your security information for the provider you selected
  - Click Validate and then click Add
 
-2) Adding Catalog Items
- - Navigate to Services>Catalogs
- - Click on the Catalog Items accordion tab
- - Click on the Configuration drop down menu, and select "+ add a New Catalog Item"
- - Select a Catalog Item Type from the drop down menu
- - In the Basic Info section, fill in the item name and description. If you would like to assign the item to a catalog, check the "Display in Catalog" box, and fill in the required information.
- - Go to the Request Info section. Navigate through each sub-tab, and fill in the information required by the provider (at a minimum, field names marked with an asterick are required)
- - Click Add
+2)Adding a Catalog
+ - Navigate to Services>Catalogs and select the Catalogs accordian tab
+ - Click on the Configuration drop down menu, and select "+ add a New Catalog"
+ - Enter a name and a simple description for your new catalog and click "add"
+*Currently, the Marketplace can only provision to catalog ID 1. To confirm your catalog id is 1, go to http://<manageiqIP>:3000/api/service_catalog to view your catlogs and their IDs
 
-3) Configuring Script to Update Cloud Engine
+3) Adding Catalog Items
+ - Navigate to Services>Catalogs
+ - Click on the Catalog Items accordion tab and click on the catalog you just created
+ - Click on the Configuration drop down menu, and select "+ add a New Catalog Item"
+ - Select a Catalog Item Type from the drop down menu (select the provider you added in step 1)
+ - In the Basic Info section, fill in the item name and description and check the "Display in Catalog" box. In the fields below, select your catalog and dialog from the dropdown menus
+ - Go to the Request Info tab. Navigate through each sub-tab, and fill in the information required by the provider (at a minimum, field names marked with an asterick are required)
+ - Click Add
+*Like the catalogs, you can view catalog item (template) IDs by going to http://<manageiqIP>:3000/api/service_template. You will need the Template ID to affiliate the catalog item in the marketplace with the catalog item in ManageIQ
+
+4) Configuring Script to Update Cloud Engine
  - Navigate to Automate>Explorer
  - Click on the Datastore folder
     - Select "Add a New Domain" from the Configuration drop down menu
@@ -216,6 +156,76 @@ service servicemix-service restart
     - Click Save
  - Create a new catalog item or select an existing one
  - For the Provisioning Entry Point, set the value to /BAH/Service/Provisioning/StateMachines/ServiceProvision_Template/ CatalogItemInitialization
+
+
+##Configuring the Marketplace
+1) Configure Communications
+ - Navigate to Store>Broker Order Communications
+ - Enter *http://CLOUD_ENGINE_IP:8183/orders/create/* in "Transmit URL"
+ - Enter the ServiceMix Username and Password
+ - Note the Receive-Api Key required to configure the Cloud Engine
+
+2) Add Template IDs
+ - Navigate to Structure>Taxonomy>CPU>Add Term
+ - In the Name field, add the template_ids of the items you created in ManageIQ, then click Save
+
+3) Add/Maintain a Catalog of Items
+ - Navigate to Content>Add Content>Product
+ - Enter a product name, summary, and description, and if you'd like, add an image
+ - In the Product section, select "Application" from the dropdown, and click "Add new product" (If you would like to add a product you've already created, click "Add Existing Product" and enter the product's SKU)
+ - Fill out the required information and click Create product (if you would like to add, remove, or change the product attributes, navigate to Structure>Taxonomy and select "edit" for the attribute you would like to alter)
+ - Navigate to the service catalog to ensure the item has been added
+ - Navigate to Store>Products, and enter the SKU of the product you created
+ - Select "edit" on the product you created, and scroll down to the CPU dropdown. From the dropdown menu, select the Template ID of the catalog item you added in ManageIQ, then click Save product
+
+4) Create a Form Email Configuration
+ - Navigate to Configuration>Workflow>Rules
+ - On the Rules page, under Active Rules, locate the rules titled "Email when project_req set to Approved," and click on the rule to edit
+ - Locate the Actions elements table and click the "+Add Action" button
+ - On the "Add a New Action" page, click on the dropdown menu to add a variable
+ - Locate "Send Mail" from the System block and click on it
+ - On the Add a New Action page, add the recipient's email, the subject, and the body, and click Save *(add "[node:field-app-code]" at the end of the subject to add the project app code)
+
+5) Update CRON Job Run Frequency
+ - Navigate to Configuration>System>Cron Settings>Settings
+ - Under "Single Job Settings," locate the job called "bah_order_com_cron," and adjust to your desired schedule and click Save
+
+6) LDAP Configuration
+ - Navigate to Configuration>People>LDAP Configuration
+ - Settings Tab
+    - The Settings page is the default tab when accessing the LDAP Configuration. All items on the Settings page should remain default.
+ - Servers tab
+    - You can add multiple LDAP Servers to use with the LDAP Authentication module. Server settings can be edited via the "List" tab once edited.
+ - User Tab
+    - This tab specifically addresses how user accounts are provisioned, synched, and updated between Drupal and Active Directory. In this envoironment, Drupal only pulls information from Active Directory so the BASIC PROVISIONING TO LDAP SETTINGS are left at their default value
+ - Authentication Tab
+    - Authenticate LDAP users
+ - Authorization
+    - This tab allows for Active Directory Security Groups to be mapped to roles and organic groups defined within Drupal and providing role Based Access to the marketplace
+ - Project Configuration
+    - When a new project has been requested, the marketplace must be updated to include the project APP code and the funding amount available for the project. Navigate to Content>Add Content>Project to create a new project and populate the appropriate title, organic group credits, and application code information.
+
+7) Updating FAQs
+ - Navigate to Content
+ - Select "FAQ" from the Type drop down menu and click Filter
+ - Click "+ Add Content" and click on FAQ
+ - Create an FAQ by filling in the question and response fields and then click Save
+
+##Configuring the Cloud Engine
+1) Use your favorite command-line accessible text editor to edit the Cloud Engine configruration file:
+```Bash
+/opt/cloudengine/servicemix/etc/com.bah.cloudengine.cfg
+```
+
+2) Make the following changes to the file, then write+exit:
+ - Insert the Marketplace, Engine, or Gateway IP addresses where they are referenced
+ - Set "marketplace.restKey" to the Receive-API Key from the Broker Order Communications Page in the Marketplace
+
+3) Restart the Cloud Engine
+```Bash
+service servicemix-service restart
+```
+
 
 ## License
 
