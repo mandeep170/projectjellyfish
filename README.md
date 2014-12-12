@@ -18,9 +18,9 @@ Cloud computing has emerged as one of the most valuable technologies for managin
 [List of Our Repos] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#list-of-our-repos)<br>
 [Requirements] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#requirements)<br>
 [Installing the Cookbooks] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#installing-the-cookbooks)<br>
+[Configuring the Cloud Gateway] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-gateway)<br>
 [Configuring the Marketplace] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-portal)<br>
 [Configuring the Cloud Engine] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-engine)<br>
-[Configuring the Cloud Gateway] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#configuring-the-cloud-gateway)<br>
 [License] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#license)<br>
 [Export Notice] (https://github.com/booz-allen-hamilton/projectjellyfish/blob/master/README.md#export-notice)
 ____
@@ -38,13 +38,13 @@ The Cloud Gateway is ManageIQ, and it enables integration between the cloud brok
 
 ## List of Our Repos
 
+ - [ManageIQ] (https://github.com/booz-allen-hamilton/manageiq)
  - [Marketplace] (https://github.com/booz-allen-hamilton/marketplace)
  - [Cloud Engine] (https://github.com/booz-allen-hamilton/servicemix)
- - [ManageIQ] (https://github.com/booz-allen-hamilton/manageiq)
  - Chef Cookbooks:
+    - [ManageIQ Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
     - [Marketplace Cookbook] (https://github.com/booz-allen-hamilton/chef-marketplace)
     - [ServiceMix Cookbook] (https://github.com/booz-allen-hamilton/chef-servicemix)
-    - [ManageIQ Cookbook] (https://github.com/booz-allen-hamilton/chef-manageiq)
 
 ## Requirements
 Jellyfish is built using three virtual machines for the three primary components. At a minimum, the cloud broker requires the following hardware, operating systems, and communications settings to support the suite of open source products.
