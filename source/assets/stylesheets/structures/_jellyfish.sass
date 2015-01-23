@@ -1,0 +1,104 @@
+// *************************************
+//
+//   Jellyfish
+//   -> Just a smack of "jellies"
+//
+// *************************************
+
+.jellyfish
+  +respond-to($g-m)
+    -webkit-overflow-scrolling: touch
+    height: 100vh
+    overflow-x: hidden
+    overflow-y: auto
+    perspective: 10px
+    position: relative
+    z-index: 1
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.jellyfish-anatomy
+  left: 0
+  margin: 0 auto
+  position: absolute
+  right: 0
+  top: 1650px
+  transform: scale(0.8) translateZ(2px)
+  width: (1061 * 0.46) + px
+  z-index: -1
+
+.jellyfish-bubbles
+  background: url(image-path('bg-bubbles.png'))
+  background-size: 100%
+  height: 5000px
+  left: 0
+  margin: 0 auto
+  position: absolute
+  right: 0
+  top: -700px
+  transform: scale(0.6) translateZ(4px)
+  max-width: 1000px
+  z-index: 0
+
+.jellyfish-engage
+  left: 0
+  margin: 0 auto
+  position: absolute
+  right: 0
+  top: 2350px
+  transform: scale(0.8) translateX(-10px) translateZ(2px)
+  width: (872 * 0.46) + px
+  z-index: -1
+
+.jellyfish-feature
+  left: 0
+  margin: 0 auto
+  position: absolute
+  right: 0
+  top: 1000px
+  transform: scale(0.8) translateZ(2px)
+  width: (870 * 0.46) + px
+  z-index: -1
+
+.jellyfish-heading
+  left: 0
+  margin: 0 auto
+  position: absolute
+  right: 0
+  top: 200px
+  transform: scale(0.8) translateZ(2px)
+  width: (1047 * 0.46) + px
+  z-index: -1
+  +respond-to(650px, min-height)
+    top: 225px
+  +respond-to(850px, min-height)
+    top: 250px
+
+.jellyfish-particles
+  @extend .stretch
+  background: url(image-path('bg-particles.jpg'))
+  background-position: center
+  background-size: ((737 * 0.5) + px) ((672 * 0.5) + px)
+  height: 2250px
+  transform: scale(2) translateZ(-10px)
+  z-index: -4

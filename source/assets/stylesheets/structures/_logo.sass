@@ -1,0 +1,71 @@
+// *************************************
+//
+//   Logo
+//   -> Any logos that are present
+//
+// *************************************
+
+.logo
+  display: block
+  margin: 0 auto
+  width: 12em
+  +respond-to($g-m)
+    float: left
+    width: 13em
+  &:hover,
+  &:focus
+    .logo-icon svg,
+    .logo-type svg
+      fill: $c-highlight
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.logo--list
+  float: none
+  list-style: none
+  padding: 0
+  width: 100%
+  li
+    display: inline-block
+    margin-bottom: $b-space-m
+    width: 25%
+    svg
+      margin: $b-space-xs $b-space-s
+      max-height: 2.5em
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.logo-icon,
+.logo-type
+  svg
+    fill: $c-text
+
+.logo-icon
+  margin: 0 auto 0.5em
+  width: 2.5em
+  +respond-to($g-m)
+    float: left
+    width: 1.875em
+
+.logo-type
+  margin: 0 auto
+  width: 100%
+  +respond-to($g-m)
+    float: right
+    width: 10.25em

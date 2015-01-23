@@ -1,0 +1,5 @@
+- get_sections.each do |section, documents|
+  %h4= section
+  %ol
+    - documents.each do |document|
+      %li= link_to document.data.title, document.url

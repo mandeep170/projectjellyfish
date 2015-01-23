@@ -1,0 +1,114 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html
+  -webkit-font-smoothing: antialiased
+  background: $c-background url(image-path('bg-particles.jpg'))
+  background-position: center
+  background-size: ((737 * 0.3) + px) ((672 * 0.3) + px)
+  color: $c-text
+  font-family: $b-fontFamily
+  font-size: $b-fontSize
+  height: 100%
+  line-height: $b-lineHeight
+
+body
+  font-size: 85%
+  height: 100%
+  +respond-to($g-s)
+    font-size: 100%
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+ol, ul
+  list-style: none
+  margin-bottom: $b-space-m
+  margin-top: 0
+  padding-left: 0
+
+li
+  margin-bottom: $b-space-s
+  margin-top: 0
+
+p
+  margin-bottom: $b-space-m
+  margin-top: 0
+
+// ----- Headings ----- //
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5
+  font-family: $b-fontFamily-heading
+  letter-spacing: 0.125em
+  line-height: 1
+  margin-bottom: 0
+  margin-top: 0
+  text-shadow: rgba($c-background, 0.75) 0 2px 5px
+  text-transform: uppercase
+
+h1, .h1
+  font-size: $b-fontSize-xxl
+  font-weight: 300
+  letter-spacing: 0.1875em
+
+h2, .h2
+  font-size: $b-fontSize-xl
+  font-weight: 300
+
+h3, .h3
+  font-size: $b-fontSize-l
+  font-weight: 300
+  margin-bottom: $b-space-s
+  margin-top: $b-space
+
+h4, .h4
+  font-size: $b-fontSize-m
+  font-weight: 700
+  line-height: 1.3
+  margin-bottom: $b-space
+
+h5, .h5
+  color: $c-blue
+  font-size: $b-fontSize
+  font-weight: 700
+  margin-bottom: $b-space
+
+// ----- Code ----- //
+
+pre
+  background: $c-footer
+  border: $b-border
+  border-radius: $b-borderRadius
+  margin-bottom: $b-space-m
+  padding: 1em
+  +respond-to($g-s)
+    font-size: $b-fontSize-s
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+// ----- Links ----- //
+
+a
+  color: $c-highlight
+  font-weight: 700
+  text-decoration: none
+  &:hover,
+  &:focus
+    color: $c-subdue
+
+// ----- Images ----- //
+
+img
+  height: auto
+  max-width: 100%

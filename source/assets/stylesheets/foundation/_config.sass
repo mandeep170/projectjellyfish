@@ -1,0 +1,99 @@
+// *************************************
+//
+//   Config
+//   -> Fonts, Variables
+//
+// *************************************
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+// ----- Temporary Imports ----- //
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,700italic|Source+Code+Pro:600)
+
+// ----- Open Sans ----- //
+
+// +font-face('OpenSans', 'OpenSans')
+// +font-face('OpenSans', 'OpenSansBold', bold)
+// +font-face('OpenSans', 'OpenSansItalic', normal, italic)
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// ----- Palette ----- //
+
+$c-blue: #69b1e1
+$c-red: #e46048
+
+// ----- Base ----- //
+
+$c-background: #101e28
+$c-border: #283741
+$c-footer: #16242d
+$c-highlight: $c-blue
+$c-text: #fff
+$c-text-invert: #444
+$c-subdue: rgba($c-text, 0.5)
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Borders & Box Shadow ----- //
+
+$b-borderRadius: 4px
+$b-borderStyle: solid
+$b-borderWidth: 1px
+$b-border: $b-borderWidth $b-borderStyle $c-border
+$b-boxShadow: 0 1px 4px rgba($c-text, 0.25)
+
+// ----- Typography ----- //
+
+$b-fontFamily-code: 'Source Code Pro', 'Courier New', Courier, monospace
+$b-fontFamily-heading: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$b-fontFamily: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$b-fontSize: 16px
+$b-fontSize-xs: 75%
+$b-fontSize-s: 87.5%
+$b-fontSize-m: 112.5%
+$b-fontSize-l: 218.75%
+$b-fontSize-xl: 343.75%
+$b-fontSize-xxl: 437.5%
+$b-lineHeight: 1.6
+
+// ----- Sizing ----- //
+
+$b-maxWidth: em(1000px)
+$b-maxWidth-s: em(400px)
+$b-space: em(20px)
+$b-space-xs: $b-space * 0.25
+$b-space-s: $b-space * 0.5
+$b-space-m: $b-space * 1.5
+$b-space-l: $b-space * 4
+$b-space-xl: $b-space * 7.5
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+// ----- Grid ----- //
+
+// Breakpoints
+
+$g-s: em(480px)
+$g-m: em(800px)
+$g-l: em(1024px)
+
+// Settings
+
+$g-columns: 12
+$g-defaults: 's' $g-s, 'm' $g-m, 'l' $g-l
+$g-gutter: 20px
+$g-silent: false
+
+// Selector
+
+$g-selector: if($g-silent, unquote("%"), unquote("."))

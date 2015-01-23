@@ -1,0 +1,52 @@
+// *************************************
+//
+//   Footer
+//   -> Last minute nav and copyright
+//
+// *************************************
+
+.footer
+  background: $c-footer
+  border-top: $b-border
+  margin-top: $b-space-l
+  padding: 2em 0
+  position: relative
+  text-align: center
+  width: 100
+  z-index: 2
+  +respond-to($g-s)
+    padding: 3em 0
+  a
+    color: $c-text
+    font-size: $b-fontSize-s
+    margin: 0 $b-space-xs
+    +respond-to($g-s)
+      font-size: $b-fontSize-xs
+      letter-spacing: 0.125em
+      margin: 0 $b-space-m
+      text-transform: uppercase
+    &:hover,
+    &:focus
+      color: $c-highlight
+  hr
+    border: 0
+    border-bottom: $b-border
+    margin: 2em 0
+    +respond-to($g-s)
+      margin: 3em 0
+  p
+    margin: 0
+    opacity: 0.35
+    font-size: $b-fontSize-s
+  .footer-logo
+    display: block
+    margin: $b-space-s auto
+    max-width: 20em
+    +respond-to($g-s)
+      max-width: 25em
+    svg
+      fill: $c-text
+    &:hover,
+    &:focus
+      svg
+        fill: $c-highlight

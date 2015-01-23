@@ -1,0 +1,15 @@
+= wrap_layout :layout do
+
+  = partial "shared/navigation"
+  .row.cell.mtl
+    .g
+      .documentation.g-b.g-b--m--7of10.fr
+        %h1= current_page.data.title
+        = find_and_preserve do
+          = yield
+      .g-b.g-b--m--3of10
+        = partial "shared/docs-nav"
+
+  = partial "shared/footer"
+
+  = javascript_include_tag  'application'

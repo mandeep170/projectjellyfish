@@ -1,0 +1,32 @@
+// *************************************
+//
+//   Button
+//   -> Applied to links and inputs
+//
+// *************************************
+
+.btn
+  background: $c-red
+  background-image: linear-gradient( lighten($c-red, 5%), darken($c-red, 5%) )
+  border: none
+  border-radius: 10em
+  color: $c-text
+  display: block
+  line-height: 1
+  margin-bottom: $b-space
+  padding: ($b-space-s * 1.25) 0
+  width: 100%
+  &:hover,
+  &:focus
+    background-image: linear-gradient( lighten($c-red, 10%), $c-red )
+    color: $c-text
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.btn--logo
+  padding: $b-space-s 0
+  svg
+    fill: $c-text
+    height: $b-space
