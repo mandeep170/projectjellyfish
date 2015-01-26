@@ -3,167 +3,167 @@
 
   = partial "shared/navigation"
 
-  .row.tac
-    .cell
-      .jellyfish-header.jellyfish--tagline
-        %h1 Open Cloud
-        = image_tag("/assets/images/jellyfish-header.png")
-        %h1 Connectivity
+  .cell.row.tac
 
-      .g.mbxl
-        .g-b.g-b--m--1of3.mtl
-          .cell.cell--s
-            %h4 What Is It?
-            %p
-              Jellyfish are responsible for helping maintain balance in
-              the ocean’s delicate, complex ecosystem. Your organization
-              needs equal versatility in its cloud service&nbsp;brokering.
-            %p.tch.tsi
-              With Project Jellyfish, you can provision and manage all
-              your on- and off-premise cloud services from a
-              centralized, open source e-commerce platform.
-        .g-b.g-b--m--1of3.fr.mtl
-          .cell.cell--s
-            %h4 Download
-            %p.tss
-              Project Jellyfish is available as a free download through
-              any of these open source distributions:
-            %a.btn.btn--logo{href: '#'}
-              = partial "/assets/images/logo-github.svg"
-            %a.btn.btn--logo{href: '#'}
-              = partial "/assets/images/logo-chef.svg"
-            %a.btn.btn--logo{href: '#'}
-              = partial "/assets/images/logo-manage.svg"
-            %p.tsxs
-              Current version: 2.4.1b
-              %span.mls.mrs.tcs|
-              %a{href: '#'} Read the documentation
+    .jellyfish-header.jellyfish--tagline
+      %h1 Open Cloud
+      = image_tag("/assets/images/jellyfish-header.png")
+      %h1 Connectivity
 
-      .jellyfish-header.jellyfish--feature
-        = image_tag("/assets/images/jellyfish-features.jpg")
-        %h2 Features
-      .g.mbm.mtxl
-        .g-b.g-b--m--1of4.mbm
-          .cell.cell--s
-            = partial "/assets/images/icon-lock.svg"
-            %h5 Avoid Vendor Lock-in
-            %p.tss
-              Nullam quis risus eget urna mollis ornare vel eu
-              leo. Integer posuere erat a ante venenatis dapibus
-              posuere velit aliquet. Fusce dapibus, tellus ac
-              cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus.
-        .g-b.g-b--m--1of4.mbm
-          .cell.cell--s
-            = partial "/assets/images/icon-modules.svg"
-            %h5 Modular
-            %p.tss
-              Nullam quis risus eget urna mollis ornare vel eu
-              leo. Integer posuere erat a ante venenatis dapibus
-              posuere velit aliquet. Fusce dapibus, tellus ac
-              cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus.
-        .g-b.g-b--m--1of4.mbm
-          .cell.cell--s
-            = partial "/assets/images/icon-search.svg"
-            %h5 Search &amp; Compare
-            %p.tss
-              Nullam quis risus eget urna mollis ornare vel eu
-              leo. Integer posuere erat a ante venenatis dapibus
-              posuere velit aliquet. Fusce dapibus, tellus ac
-              cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus.
-        .g-b.g-b--m--1of4.mbm
-          .cell.cell--s
-            = partial "/assets/images/icon-manage.svg"
-            %h5 Manage in One Place
-            %p.tss
-              Nullam quis risus eget urna mollis ornare vel eu
-              leo. Integer posuere erat a ante venenatis dapibus
-              posuere velit aliquet. Fusce dapibus, tellus ac
-              cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus.
-
-      .jellyfish-header.jellyfish--anatomy
-        = image_tag("/assets/images/jellyfish-anatomy.jpg")
-        %h3 Anatomy of a Jellyfish
-      .g.mbm.mtl
-        .g-b.g-b--m--1of4.mbm
-          .cell.cell--s
-            = partial "/assets/images/icon-lock.svg"
-            %h5 Core
-            %p.tss
-              The Jellyfish Core is a system that IT admins can
-              setup to offer a service catalog, collect specific
-              information about an item when ordering, and then
-              take that data transform it to JSON and POST it to
-              a URL. Jellyfish Core consists of node-js, UX/UI,
-              front-end and a Ruby on Rails back-end accessible
-              via a REST API.
-        .g-b.g-b--m--1of4.mbm
-          .cell.cell--s
-            = partial "/assets/images/icon-modules.svg"
-            %h5 Modules
-            %p.tss
-              A module would be considered an add-on or plug-in
-              to the Jellyfish core.  It allows the creation of
-              new data points to be collected, for new data to be
-              pulled from an external systems API, and/or that
-              data to be processed in a specific way.
-        .g-b.g-b--m--1of4.mbm
-          .cell.cell--s
-            = partial "/assets/images/icon-search.svg"
-            %h5 Mobile App
-            %p.tss
-              The jellyfish app mirrors Jellyfish functionality
-              for mobile devices.  The app interfaces with
-              Jellyfish core via the REST API providing basic
-              functionality such as catalog and project status.
-        .g-b.g-b--m--1of4.mbm
-          .cell.cell--s
-            = partial "/assets/images/icon-manage.svg"
-            %h5 Blueprint
-            %p.tss
-              A Jellyfish Blueprint is a packaged solution that
-              formulates how to take the core jellyfish product,
-              combine with other tools, install, configure and
-              use for a specific problem or use case such as
-              automated PaaS or data analytics.
-
-      .cell.mbl.mts
-        .jellyfish-header.jellyfish--engage
-          = image_tag("/assets/images/jellyfish-engage.jpg")
-          %h3 How to Engage
-        %form{action: '#'}
-        .g.mbs
-          .g-b.g-b--m--1of3.input
-            .cell.cell--s
-              %input.input-text#name{type: 'text', name: 'name', required: 'required'}
-              %label.input-label{for: 'name'} Full Name
-          .g-b.g-b--m--1of3.input
-            .cell.cell--s
-              %input.input-text#email{type: 'text', name: 'email', required: 'required'}
-              %label.input-label{for: 'email'} Email
-          .g-b.g-b--m--1of3.input
-            .cell.cell--s
-              %input.input-text#organization{type: 'text', name: 'Organization', required: 'required'}
-              %label.input-label{for: 'organization'} Organization
+    .g.mbxl
+      .g-b.g-b--m--1of3.mtl
         .cell.cell--s
-          %input.btn{type: 'submit', value: 'Make Request'}
+          %h4 What Is It?
+          %p
+            Jellyfish are responsible for helping maintain balance in
+            the ocean’s delicate, complex ecosystem. Your organization
+            needs equal versatility in its cloud service&nbsp;brokering.
+          %p.tch.tsi
+            With Project Jellyfish, you can provision and manage all
+            your on- and off-premise cloud services from a
+            centralized, open source e-commerce platform.
+      .g-b.g-b--m--1of3.fr.mtl
+        .cell.cell--s
+          %h4 Download
+          %p.tss
+            Project Jellyfish is available as a free download through
+            any of these open source distributions:
+          %a.btn.btn--logo{href: '#'}
+            = partial "/assets/images/logo-github.svg"
+          %a.btn.btn--logo{href: '#'}
+            = partial "/assets/images/logo-chef.svg"
+          %a.btn.btn--logo{href: '#'}
+            = partial "/assets/images/logo-manage.svg"
+          %p.tsxs
+            Current version: 2.4.1b
+            %span.mls.mrs.tcs|
+            %a{href: '#'} Read the documentation
 
-      %h3 Partners
+    .jellyfish-header.jellyfish--feature
+      = image_tag("/assets/images/jellyfish-features.jpg")
+      %h2 Features
+    .g.mbm.mtxl
+      .g-b.g-b--m--1of4.mbm
+        .cell.cell--s
+          = partial "/assets/images/icon-lock.svg"
+          %h5 Avoid Vendor Lock-in
+          %p.tss
+            Nullam quis risus eget urna mollis ornare vel eu
+            leo. Integer posuere erat a ante venenatis dapibus
+            posuere velit aliquet. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh, ut
+            fermentum massa justo sit amet risus.
+      .g-b.g-b--m--1of4.mbm
+        .cell.cell--s
+          = partial "/assets/images/icon-modules.svg"
+          %h5 Modular
+          %p.tss
+            Nullam quis risus eget urna mollis ornare vel eu
+            leo. Integer posuere erat a ante venenatis dapibus
+            posuere velit aliquet. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh, ut
+            fermentum massa justo sit amet risus.
+      .g-b.g-b--m--1of4.mbm
+        .cell.cell--s
+          = partial "/assets/images/icon-search.svg"
+          %h5 Search &amp; Compare
+          %p.tss
+            Nullam quis risus eget urna mollis ornare vel eu
+            leo. Integer posuere erat a ante venenatis dapibus
+            posuere velit aliquet. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh, ut
+            fermentum massa justo sit amet risus.
+      .g-b.g-b--m--1of4.mbm
+        .cell.cell--s
+          = partial "/assets/images/icon-manage.svg"
+          %h5 Manage in One Place
+          %p.tss
+            Nullam quis risus eget urna mollis ornare vel eu
+            leo. Integer posuere erat a ante venenatis dapibus
+            posuere velit aliquet. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh, ut
+            fermentum massa justo sit amet risus.
+
+    .jellyfish-header.jellyfish--anatomy
+      = image_tag("/assets/images/jellyfish-anatomy.jpg")
+      %h3 Anatomy of a Jellyfish
+    .g.mbm.mtl
+      .g-b.g-b--m--1of4.mbm
+        .cell.cell--s
+          = partial "/assets/images/icon-lock.svg"
+          %h5 Core
+          %p.tss
+            The Jellyfish Core is a system that IT admins can
+            setup to offer a service catalog, collect specific
+            information about an item when ordering, and then
+            take that data transform it to JSON and POST it to
+            a URL. Jellyfish Core consists of node-js, UX/UI,
+            front-end and a Ruby on Rails back-end accessible
+            via a REST API.
+      .g-b.g-b--m--1of4.mbm
+        .cell.cell--s
+          = partial "/assets/images/icon-modules.svg"
+          %h5 Modules
+          %p.tss
+            A module would be considered an add-on or plug-in
+            to the Jellyfish core.  It allows the creation of
+            new data points to be collected, for new data to be
+            pulled from an external systems API, and/or that
+            data to be processed in a specific way.
+      .g-b.g-b--m--1of4.mbm
+        .cell.cell--s
+          = partial "/assets/images/icon-search.svg"
+          %h5 Mobile App
+          %p.tss
+            The jellyfish app mirrors Jellyfish functionality
+            for mobile devices.  The app interfaces with
+            Jellyfish core via the REST API providing basic
+            functionality such as catalog and project status.
+      .g-b.g-b--m--1of4.mbm
+        .cell.cell--s
+          = partial "/assets/images/icon-manage.svg"
+          %h5 Blueprint
+          %p.tss
+            A Jellyfish Blueprint is a packaged solution that
+            formulates how to take the core jellyfish product,
+            combine with other tools, install, configure and
+            use for a specific problem or use case such as
+            automated PaaS or data analytics.
+
+    .cell.mbl.mts
+      .jellyfish-header.jellyfish--engage
+        = image_tag("/assets/images/jellyfish-engage.jpg")
+        %h3 How to Engage
+      %form{action: '#'}
+      .g.mbs
+        .g-b.g-b--m--1of3.input
+          .cell.cell--s
+            %input.input-text#name{type: 'text', name: 'name', required: 'required'}
+            %label.input-label{for: 'name'} Full Name
+        .g-b.g-b--m--1of3.input
+          .cell.cell--s
+            %input.input-text#email{type: 'text', name: 'email', required: 'required'}
+            %label.input-label{for: 'email'} Email
+        .g-b.g-b--m--1of3.input
+          .cell.cell--s
+            %input.input-text#organization{type: 'text', name: 'Organization', required: 'required'}
+            %label.input-label{for: 'organization'} Organization
       .cell.cell--s
-        %p.tss
-          Project Jellyfish would not exist without the support
-          of our growing numbers of individual and
-          corporate&nbsp;contributors.
-      %ul.logo.logo--list
-        %li
-          = partial '/assets/images/logo-aws.svg'
-        %li
-          = partial '/assets/images/logo-azure.svg'
-        %li
-          = partial '/assets/images/logo-redhat.svg'
-      = link_to 'Learn more about how your company can help.', '#'
+        %input.btn{type: 'submit', value: 'Make Request'}
+
+    %h3 Partners
+    .cell.cell--s
+      %p.tss
+        Project Jellyfish would not exist without the support
+        of our growing numbers of individual and
+        corporate&nbsp;contributors.
+    %ul.logo.logo--list
+      %li
+        = partial '/assets/images/logo-aws.svg'
+      %li
+        = partial '/assets/images/logo-azure.svg'
+      %li
+        = partial '/assets/images/logo-redhat.svg'
+    = link_to 'Learn more about how your company can help.', '#'
 
   = partial "shared/footer"
