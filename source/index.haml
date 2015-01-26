@@ -1,21 +1,14 @@
 .jellyfish
-  .jellyfish-anatomy
-    = image_tag("/assets/images/jellyfish-anatomy.jpg")
-  .jellyfish-bubbles
-  .jellyfish-engage
-    = image_tag("/assets/images/jellyfish-engage.jpg")
-  .jellyfish-feature
-    = image_tag("/assets/images/jellyfish-features.jpg")
-  .jellyfish-heading
-    = image_tag("/assets/images/jellyfish-header.png")
-  .jellyfish-particles
+  -# .jellyfish-bubbles
+  -# .jellyfish-particles
 
   = partial "shared/navigation"
 
   .row.tac
     .cell
-      .tagline
+      .jellyfish-header.jellyfish--tagline
         %h1 Open Cloud
+        = image_tag("/assets/images/jellyfish-header.png")
         %h1 Connectivity
 
       .g.mbxl
@@ -47,7 +40,9 @@
               %span.mls.mrs.tcs|
               %a{href: '#'} Read the documentation
 
-      %h2.mbm.mtm Features
+      .jellyfish-header.jellyfish--feature
+        = image_tag("/assets/images/jellyfish-features.jpg")
+        %h2 Features
       .g.mbm.mtxl
         .g-b.g-b--m--1of4.mbm
           .cell.cell--s
@@ -90,7 +85,9 @@
               cursus commodo, tortor mauris condimentum nibh, ut
               fermentum massa justo sit amet risus.
 
-      %h3.mbl.mtl Anatomy of a Jellyfish
+      .jellyfish-header.jellyfish--anatomy
+        = image_tag("/assets/images/jellyfish-anatomy.jpg")
+        %h3 Anatomy of a Jellyfish
       .g.mbm.mtl
         .g-b.g-b--m--1of4.mbm
           .cell.cell--s
@@ -135,7 +132,9 @@
               automated PaaS or data analytics.
 
       .cell.mbl.mts
-        %h3.mbm How to Engage
+        .jellyfish-header.jellyfish--engage
+          = image_tag("/assets/images/jellyfish-engage.jpg")
+          %h3 How to Engage
         %form{action: '#'}
         .g.mbs
           .g-b.g-b--m--1of3.input

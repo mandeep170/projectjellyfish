@@ -16,36 +16,10 @@
     z-index: 1
 
 // -------------------------------------
-//   Modifiers
-// -------------------------------------
-
-// .structure--modifier
-
-// -------------------------------------
-//   States
-// -------------------------------------
-
-// .structure.is-state
-
-// -------------------------------------
-//   Context
-// -------------------------------------
-
-// .has-structure
-
-// -------------------------------------
 //   Scaffolding
 // -------------------------------------
 
-.jellyfish-anatomy
-  left: 0
-  margin: 0 auto
-  position: absolute
-  right: 0
-  top: 1700px
-  transform: scale(0.8) translateZ(2px)
-  max-width: 300px
-  z-index: -1
+// ----- Bubbles ----- //
 
 .jellyfish-bubbles
   background: url(image-path('bg-bubbles.png'))
@@ -60,39 +34,63 @@
   max-width: 1000px
   z-index: 0
 
-.jellyfish-engage
-  left: 0
-  margin: 0 auto
-  position: absolute
-  right: 0
-  top: 2385px
-  transform: scale(0.8) translateX(-10px) translateZ(2px)
-  width: 325px
-  z-index: -1
+// ----- Header ----- //
 
-.jellyfish-feature
-  left: 0
-  margin: 0 auto
-  position: absolute
-  right: 0
-  top: 1025px
-  transform: scale(0.8) translateZ(2px)
-  width: 325px
-  z-index: -1
+.jellyfish-header
+  position: relative
+  img
+    left: 0
+    margin: 0 auto
+    position: absolute
+    right: 0
+    transform: scale(0.8) translateZ(2px)
+    z-index: -1
 
-.jellyfish-heading
-  left: 0
-  margin: 0 auto
-  position: absolute
-  right: 0
-  top: 200px
-  transform: scale(0.8) translateZ(2px)
-  width: (1047 * 0.46) + px
-  z-index: -1
-  +respond-to(650px, min-height)
-    top: 225px
-  +respond-to(850px, min-height)
-    top: 250px
+// Modifiers
+
+.jellyfish--anatomy
+  h3
+    margin: $b-space-l auto
+  img
+    margin-top: -100px
+    max-width: 300px
+
+.jellyfish--engage
+  h3
+    margin-bottom: $b-space-m
+  img
+    margin-top: -75px
+    max-width: 325px
+
+.jellyfish--feature
+  h2
+    margin: $b-space-m auto
+  img
+    margin-top: -65px
+    max-width: 325px
+
+.jellyfish--tagline
+  font-size: 2vw
+  +respond-to($g-m)
+    font-size: inherit
+  h1:first-child
+    margin-bottom: 0.25em
+    margin-top: 1.75em
+    position: relative
+    z-index: -2
+  h1:last-child
+    margin-bottom: 2.75em
+  img
+    margin-top: -130px
+    max-width: 500px
+    +respond-to(650px, min-height)
+      margin-top: -105px
+    +respond-to(900px, min-height)
+      margin-top: -80px
+    +respond-to(1200px, min-height)
+      margin-top: -50px
+
+// ----- Particles ----- //
 
 .jellyfish-particles
   @extend .stretch
