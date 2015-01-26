@@ -46,18 +46,22 @@
   -webkit-appearance: none
   border: none
   border-radius: $b-borderRadius
+  box-shadow: $c-blue 0 0 0 0
   color: $c-text-invert
   font-size: $b-fontSize * 1.25
+  outline: none
   padding: $b-space 0 $b-space-s
   text-align: center
+  transition: box-shadow 100ms ease-out
   width: 100%
   &:valid
     + .input-label
-      color: $c-blue
+      color: lighten($c-text-invert, 50%)
       font-size: 65%
       font-weight: bold
       top: 12%
   &:focus
+    box-shadow: $c-blue 0 0 0 4px
     + .input-label
       color: $c-blue
       font-size: 65%
