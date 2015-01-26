@@ -101,14 +101,14 @@
   img
     max-width: 500px
     top: -60px
-    +respond-to(900px, max-height)
-      top: -20px
-    +respond-to(650px, max-height)
-      top: -45px
     +respond-to($g-s)
       top: -80px
     +respond-to($g-m)
       top: 10px
+    @media screen and (max-height: 900px) and (min-width: $g-m)
+      top: -20px
+    @media screen and (max-height: 650px) and (min-width: $g-m)
+      top: -45px
 
 // ----- Particles ----- //
 
