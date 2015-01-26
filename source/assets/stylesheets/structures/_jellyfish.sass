@@ -41,11 +41,14 @@
   img
     left: 0
     margin: 0 auto
+    opacity: 0.65
     position: absolute
     right: 0
+    top: 0
     width: 100%
     z-index: -1
     +respond-to($g-m)
+      opacity: 1
       transform: scale(0.8) translateZ(2px)
 
 // Modifiers
@@ -96,14 +99,16 @@
   h1:last-child
     margin-bottom: 2.75em
   img
-    margin-top: -130px
     max-width: 500px
-    +respond-to(650px, min-height)
-      margin-top: -105px
-    +respond-to(900px, min-height)
-      margin-top: -80px
-    +respond-to(1200px, min-height)
-      margin-top: -50px
+    top: -60px
+    +respond-to(900px, max-height)
+      top: -20px
+    +respond-to(650px, max-height)
+      top: -45px
+    +respond-to($g-s)
+      top: -80px
+    +respond-to($g-m)
+      top: 10px
 
 // ----- Particles ----- //
 
