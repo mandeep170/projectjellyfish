@@ -52,24 +52,36 @@
 
 .jellyfish--anatomy
   h3
-    margin: $b-space-l auto
+    margin: ($b-space-l * 0.75) auto
+    +respond-to($g-m)
+      margin: $b-space-l auto
   img
-    margin-top: -100px
-    max-width: 300px
+    margin-top: -60px
+    max-width: 175px
+    +respond-to($g-m)
+      margin-top: -100px
+      max-width: 300px
 
 .jellyfish--engage
   h3
-    margin-bottom: $b-space-m
+    margin-bottom: $b-space-s
+    margin-top: ($b-space-l * 0.75)
+    +respond-to($g-m)
+      margin-bottom: $b-space-m
   img
-    margin-top: -75px
-    max-width: 325px
+    margin-top: -100px
+    max-width: 200px
+    +respond-to($g-m)
+      margin-top: -75px
+      max-width: 325px
 
 .jellyfish--feature
-  h2
-    margin: $b-space-m auto
   img
-    margin-top: -65px
-    max-width: 325px
+    margin-top: -50px
+    max-width: 200px
+    +respond-to($g-m)
+      margin-top: -65px
+      max-width: 325px
 
 .jellyfish--tagline
   font-size: 2vw
