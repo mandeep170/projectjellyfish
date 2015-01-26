@@ -30,10 +30,13 @@
   li
     display: inline-block
     margin-bottom: $b-space-m
-    width: 25%
+    width: 100%
+    +respond-to($g-m)
+      width: 25%
     svg
       margin: $b-space-xs $b-space-s
       max-height: 2.5em
+      max-width: 12em
 
 // -------------------------------------
 //   States
