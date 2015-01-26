@@ -37,6 +37,7 @@
   position: absolute
   top: 30%
   transform: scale(1.1)
+  transition: all 100ms ease-out
   width: 100%
   &:hover
     cursor: text
@@ -50,3 +51,15 @@
   padding: $b-space 0 $b-space-s
   text-align: center
   width: 100%
+  &:valid
+    + .input-label
+      color: $c-blue
+      font-size: 65%
+      font-weight: bold
+      top: 12%
+  &:focus
+    + .input-label
+      color: $c-blue
+      font-size: 65%
+      font-weight: bold
+      top: 12%

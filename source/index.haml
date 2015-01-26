@@ -140,15 +140,15 @@
         .g.mbs
           .g-b.g-b--m--1of3.input
             .cell.cell--s
-              %input.input-text#name{type: 'text', name: 'name'}
+              %input.input-text#name{type: 'text', name: 'name', required: 'required'}
               %label.input-label{for: 'name'} Full Name
           .g-b.g-b--m--1of3.input
             .cell.cell--s
-              %input.input-text#email{type: 'text', name: 'email'}
+              %input.input-text#email{type: 'text', name: 'email', required: 'required'}
               %label.input-label{for: 'email'} Email
           .g-b.g-b--m--1of3.input
             .cell.cell--s
-              %input.input-text#organization{type: 'text', name: 'Organization'}
+              %input.input-text#organization{type: 'text', name: 'Organization', required: 'required'}
               %label.input-label{for: 'organization'} Organization
         .cell.cell--s
           %input.btn{type: 'submit', value: 'Make Request'}
