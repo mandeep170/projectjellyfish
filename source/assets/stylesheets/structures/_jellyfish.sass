@@ -24,6 +24,7 @@
 .jellyfish-bubbles
   background: url(image-path('bg-bubbles.png'))
   background-size: 100%
+  display: none
   height: 5000px
   left: 0
   margin: 0 auto
@@ -33,6 +34,8 @@
   transform: scale(0.6) translateZ(4px)
   max-width: 1000px
   z-index: 0
+  +respond-to($g-m)
+    display: block
 
 // ----- Header ----- //
 
@@ -92,12 +95,13 @@
     font-size: inherit
   h1:first-child
     margin-bottom: 0.25em
-    margin-top: 1.75em
+    margin-top: 2.5em
     position: relative
     +respond-to($g-m)
+      margin-top: 1.75em
       z-index: -2
   h1:last-child
-    margin-bottom: 2.75em
+    margin-bottom: 1.5em
   img
     max-width: 500px
     top: -60px
