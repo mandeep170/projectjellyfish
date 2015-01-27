@@ -35,7 +35,7 @@ Simply make changes to the site as necessary in your favorite IDE/text editor. A
 
 After you have finished making changes, you will need to commit them back to GitHub. This can easily be done by:
 
-1. Run this command with a description of the changes you made included: `git commit -am “<place the description here>”
+1. Run this command with a description of the changes you made included: `git commit -am “<place the description here>”`
 2a. Push the changes back up to GitHub: `git push origin marketing`
 2b. If you have problems when pushing back up to GitHub, you might need to run this command: `git pull --rebase origin marketing` and then running 2a’s command again.
 
@@ -47,7 +47,7 @@ Deployment directions will be available soon.
 
 ## Additional Resources
 
-If you do not feel comfortable with Git, or would like to know more about it, head on over to [Try Git](try.github.io) and got through the tutorial. 
+If you do not feel comfortable with Git, or would like to know more about it, head on over to [Try Git](try.github.io) and got through the tutorial.
 
 ## Editing Documentation
 
@@ -81,14 +81,3 @@ Each setting has a few rules:
 - `section` - this value will create a new section in the documentation navigation. **Always begin a section with a letter delineator**—this will make sure that you can organize the sections in the way you want. If you want several documents in the same section, they will all need to match in this setting.
 - `status` - only pages set to `published` will be displayed in the navigation. You may still access the file for preview by navigating to the correct URL.
 - `title` - this will simply title the entire page. You will not need to duplicate the page title in the actual markdown content.
-
-
-
-
-
-
-
-
-
-
-
