@@ -1,8 +1,7 @@
-# *************************************
-#
-#   Baseman
-#   -> Manifest file
-#
-# *************************************
-
-# ...
+// *************************************
+//
+//   smoothScroll
+//   -> Anchor scrolling for homepage
+//     github.com/alicelieutier/smoothScroll
+//
+// *************************************
