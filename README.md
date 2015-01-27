@@ -36,10 +36,8 @@ Simply make changes to the site as necessary in your favorite IDE/text editor. A
 After you have finished making changes, you will need to commit them back to GitHub. This can easily be done by:
 
 1. Run this command with a description of the changes you made included: `git commit -am “<place the description here>”`
-
-2a. Push the changes back up to GitHub: `git push origin marketing`
-
-2b. If you have problems when pushing back up to GitHub, you might need to run this command: `git pull --rebase origin marketing` and then running 2a’s command again.
+2. Push the changes back up to GitHub: `git push origin marketing`
+3. If you have problems when pushing back up to GitHub, you might need to run this command: `git pull --rebase origin marketing` and then running 2’s command again.
 
 Remember that these actions do not deploy the changes to the live site unless you follow the next section
 
