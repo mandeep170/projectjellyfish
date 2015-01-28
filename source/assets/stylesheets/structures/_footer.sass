@@ -1,7 +1,7 @@
 // *************************************
 //
 //   Footer
-//   -> Last minute nav and copyright
+//   -> Final nav and copyright
 //
 // *************************************
 
@@ -38,15 +38,20 @@
     margin: 0
     opacity: 0.35
     font-size: $b-fontSize-s
-  .footer-logo
-    display: block
-    margin: $b-space-s auto
-    max-width: 20em
-    +respond-to($g-s)
-      max-width: 25em
+
+// -------------------------------------
+//  Scaffolding
+// -------------------------------------
+
+.footer-logo
+  display: block
+  margin: $b-space-s auto !important
+  max-width: 20em
+  +respond-to($g-s)
+    max-width: 25em
+  svg
+    fill: $c-text
+  &:hover,
+  &:focus
     svg
-      fill: $c-text
-    &:hover,
-    &:focus
-      svg
-        fill: $c-highlight
+      fill: $c-highlight
