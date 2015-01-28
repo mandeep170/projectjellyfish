@@ -71,23 +71,25 @@
 .jellyfish--engage
   h3
     margin-bottom: $b-space-s
-    margin-top: ($b-space-l * 0.75)
+    padding-top: ($b-space-l * 0.75)
     +respond-to($g-m)
       margin-bottom: $b-space-m
   img
-    margin-top: -100px
     max-width: 200px
+    top: 0px
     +respond-to($g-m)
-      margin-top: -75px
       max-width: 325px
+      top: 75px
 
 .jellyfish--feature
+  h2
+    padding: ($b-space-m * 1.45) 0
   img
-    margin-top: -50px
     max-width: 200px
+    top: 70px
     +respond-to($g-m)
-      margin-top: -65px
       max-width: 325px
+      top: 110px
 
 .jellyfish--tagline
   font-size: 2vw
