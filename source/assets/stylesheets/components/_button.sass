@@ -25,6 +25,12 @@
 //   Modifiers
 // -------------------------------------
 
+.btn--blue
+  background-image: linear-gradient( lighten($c-blue, 5%), darken($c-blue, 5%) )
+  &:hover,
+  &:focus
+    background-image: linear-gradient( lighten($c-blue, 10%), $c-blue )
+
 .btn--logo
   padding: $b-space-s 0
   svg
