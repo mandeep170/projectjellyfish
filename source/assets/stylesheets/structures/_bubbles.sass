@@ -1,0 +1,33 @@
+// *************************************
+//
+//   Bubbles
+//   -> Background animation
+//
+// *************************************
+
+.bubbles
+  animation: scroll 60s infinite linear
+  display: none
+  +respond-to($g-m)
+    display: block
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+.has-bubbles
+  @extend .stretch
+  margin: 0 auto
+  max-width: 1000px
+  overflow: hidden
+  position: fixed
+
+// -------------------------------------
+//   Keyframes
+// -------------------------------------
+
+@keyframes scroll
+  from
+    transform: translateY(0%)
+  to
+    transform: translateY(-100%)
