@@ -21,6 +21,10 @@ activate :directory_indexes
 
 activate :automatic_image_sizes
 
+# ----- Syntax ----- #
+
+activate :syntax
+
 # ----- Markdown ----- #
 
 set :markdown_engine, :redcarpet
