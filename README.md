@@ -24,6 +24,7 @@ Editing should be broken down into two steps:
 Anytime you want to edit something, make sure that you are up-to-date by following these commands:
 1. Checkout the `marketing` branch: `git checkout marketing`
 2. Get the latest code: `git pull origin marketing`
+3. Sometimes, you might need to run `bundle install` again (step 4 in the Middleman section from above)
 
 ###### B. Make Changes
 Simply make changes to the site as necessary in your favorite IDE/text editor. A few notes for whenever you need to edit something:
