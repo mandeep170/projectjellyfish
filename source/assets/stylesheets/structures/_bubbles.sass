@@ -6,8 +6,13 @@
 // *************************************
 
 .bubbles
-  animation: scroll 60s infinite linear
+  @extend .stretch
+  animation: scroll 30s infinite linear
+  background: url(image-path('bg-bubbles.png'))
+  background-repeat: repeat-y
+  background-size: 100%
   display: none
+  height: 300vh
   +respond-to($g-m)
     display: block
 
@@ -28,6 +33,6 @@
 
 @keyframes scroll
   from
-    transform: translateY(0%)
+    transform: translateY(0)
   to
-    transform: translateY(-100%)
+    transform: translateY(-78vh)
