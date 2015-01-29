@@ -9,7 +9,7 @@
 
     .jellyfish-header.jellyfish--tagline
       %h1 Open Cloud
-      = image_tag("/assets/images/jellyfish-header.png")
+      = image_tag("jellyfish-header.png")
       %h1 Connectivity
 
     .g
@@ -27,25 +27,24 @@
           %p.tss
             Project Jellyfish is available as a free download through
             any of these open source distributions:
-          %a.btn.btn--logo{href: '#'}
-            = image_tag "/assets/images/logo-github.svg"
-          %a.btn.btn--logo{href: '#'}
-            = image_tag "/assets/images/logo-chef.svg"
-          %a.btn.btn--logo{href: '#'}
-            = image_tag "/assets/images/logo-manage.svg"
+          = link_to '#', class: 'btn btn--logo' do
+            = image_tag("logo-github.svg")
+          = link_to '#', class: 'btn btn--logo' do
+            = image_tag("logo-chef.svg")
+          = link_to '#', class: 'btn btn--logo' do
+            = image_tag("logo-manage.svg")
           %p.tsxs
             Current version: 2.4.1b
             %span.mls.mrs.tcs|
-            %a{href: '#'} Read the documentation
+            = link_to 'Read the documentation', '#'
 
     .jellyfish-header.jellyfish--feature#features
-      = image_tag("/assets/images/jellyfish-features.jpg")
+      = image_tag("jellyfish-features.jpg")
       %h2 Features
     .g
       .g-b.g-b--m--1of4.mbm
         .cell.cell--s
-          .icon
-            = image_tag "/assets/images/icon-lock.svg"
+          .icon= image_tag("icon-lock.svg")
           %h5 Open Source
           %p.mbs.tss
             Community-driven software allows enterprises to
@@ -56,8 +55,7 @@
           %p.twb Avoid Vendor Lock-In
       .g-b.g-b--m--1of4.mbm
         .cell.cell--s
-          .icon
-            = image_tag "/assets/images/icon-community.svg"
+          .icon= image_tag("icon-community.svg")
           %h5 Community-Driven
           %p.mbs.tss
             Community-driven software allows enterprises to
@@ -68,8 +66,7 @@
           %p.twb Leverage Community's Expertise
       .g-b.g-b--m--1of4.mbm
         .cell.cell--s
-          .icon
-            = image_tag "/assets/images/icon-modules.svg"
+          .icon= image_tag("icon-modules.svg")
           %h5 Modular
           %p.mbs.tss
             Community-driven software allows enterprises to
@@ -80,8 +77,7 @@
           %p.twb Change Functionalities Without&nbsp;Rearchitecting
       .g-b.g-b--m--1of4.mbm
         .cell.cell--s
-          .icon
-            = image_tag "/assets/images/icon-manage.svg"
+          .icon= image_tag("icon-manage.svg")
           %h5 Flexible
           %p.mbs.tss
             One of the greatest costs to an IT organization is
@@ -91,13 +87,12 @@
           %p.twb Customizable Automation
 
     .jellyfish-header.jellyfish--anatomy
-      = image_tag("/assets/images/jellyfish-anatomy.jpg")
+      = image_tag("jellyfish-anatomy.jpg")
       %h3 Anatomy of a Jellyfish
     .g
       .g-b.g-b--m--1of4.mbm
         .cell.cell--s
-          .icon
-            = image_tag "/assets/images/icon-core.svg"
+          .icon= image_tag("icon-core.svg")
           %h5 Core
           %p.tss
             The Jellyfish Core is a system that IT admins can
@@ -109,8 +104,7 @@
             via a REST API.
       .g-b.g-b--m--1of4.mbm
         .cell.cell--s
-          .icon
-            = image_tag "/assets/images/icon-modules.svg"
+          .icon= image_tag("icon-modules.svg")
           %h5 Modules
           %p.tss
             A module would be considered an add-on or plug-in
@@ -120,8 +114,7 @@
             data to be processed in a specific way.
       .g-b.g-b--m--1of4.mbm
         .cell.cell--s
-          .icon
-            = image_tag "/assets/images/icon-mobile.svg"
+          .icon= image_tag("icon-mobile.svg")
           %h5 Mobile App
           %p.tss
             The jellyfish app mirrors Jellyfish functionality
@@ -130,8 +123,7 @@
             functionality such as catalog and project status.
       .g-b.g-b--m--1of4.mbm
         .cell.cell--s
-          .icon
-            = image_tag "/assets/images/icon-blueprint.svg"
+          .icon= image_tag("icon-blueprint.svg")
           %h5 Blueprint
           %p.tss
             A Jellyfish Blueprint is a packaged solution that
@@ -142,7 +134,7 @@
 
     .cell.mbl#how-to-engage
       .jellyfish-header.jellyfish--engage
-        = image_tag("/assets/images/jellyfish-engage.jpg")
+        = image_tag("jellyfish-engage.jpg")
         %h3 How to Engage
       %form{action: '#'}
         .g.mbs
@@ -168,12 +160,9 @@
         of our growing numbers of individual and
         corporate&nbsp;contributors.
     %ul.logo.logo--list
-      %li
-        = partial '/assets/images/logo-aws.svg'
-      %li
-        = partial '/assets/images/logo-azure.svg'
-      %li
-        = partial '/assets/images/logo-redhat.svg'
+      %li= image_tag("/assets/images/logo-aws.svg")
+      %li= image_tag("/assets/images/logo-azure.svg")
+      %li= image_tag("/assets/images/logo-redhat.svg")
     = link_to 'Learn more about how your company can help.', '#'
 
   = partial "shared/footer"
