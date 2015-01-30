@@ -46,12 +46,13 @@ Remember that these actions do not deploy the changes to the live site unless yo
 
 Once you have made changes to the site and feel comfortable making
 the changes live, simply follow these two steps:
+
 1. Run `middleman build` to rebuild the static website code base.
 2. Run `middleman deploy` to push the newly built site live.
 
 ## Additional Resources
 
-If you do not feel comfortable with Git, or would like to know more about it, head on over to [Try Git](try.github.io) and got through the tutorial.
+If you do not feel comfortable with Git, or would like to know more about it, head on over to [Try Git](try.github.io) and go through the tutorial.
 
 ## Editing Documentation
 
