@@ -52,7 +52,7 @@ the changes live, simply follow these two steps:
 
 ## Additional Resources
 
-If you do not feel comfortable with Git, or would like to know more about it, head on over to [Try Git](try.github.io) and go through the tutorial.
+If you do not feel comfortable with Git, or would like to know more about it, head on over to [Try Git](http://try.github.io) and go through the tutorial.
 
 ## Editing Documentation
 
