@@ -1,9 +1,9 @@
 ---
 layout: document
 priority: 2
-section: A. Jellyfish Basics
+section: A. About Project
 status: published
-title: Configuration
+title: Roadmap
 ---
 
 Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

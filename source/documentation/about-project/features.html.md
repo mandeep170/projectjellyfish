@@ -1,8 +1,9 @@
 ---
 layout: document
-section: A. Jellyfish Basics
-status: draft
-title: Draft
+priority: 1
+section: A. About Project
+status: published
+title: Features
 ---
 
 Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
